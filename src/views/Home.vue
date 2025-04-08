@@ -1,16 +1,23 @@
 <template>
   <div class="home">
-    <div class="hero-section">
-      <div class="container">
-        <div class="hero-content">
-          <h1>SteelNovo Blacksmith</h1>
-          <h2>Master Craftsmanship by Two Brothers</h2>
-          <p>Forging tradition with modern craftsmanship since 2010</p>
-          <div class="cta-buttons">
-            <router-link to="/gallery" class="btn btn-primary">View Our Work</router-link>
-            <router-link to="/contact" class="btn btn-outline-light ms-2">Contact Us</router-link>
+    <div class="video-container">
+      <video 
+          ref="videoElement"
+          src="@/assets/videos/mock-menu-video.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="auto"
+          class="header-video"
+          @loadeddata="handleVideoLoaded"
+          @error="handleVideoError">
+      </video>
+      <div v-if="videoError" class="video-fallback">
+          <!-- Fallback content if video fails to load -->
+          <div class="video-error-message">
+            <p>{{ $t('errors.videoLoadFailed') }}</p>
           </div>
-        </div>
       </div>
     </div>
     
@@ -64,19 +71,19 @@ export default {
     return {
       featuredItems: [
         {
-          title: 'Custom Metal Gate',
-          image: '/images/featured-1.jpg',
-          description: 'Hand-forged ornamental gate with intricate scrollwork and nature-inspired motifs.'
+          title: 'Decorative Garden Gate',
+          image: '@/assets/images/416090964_333012463031148_8278810173838462944_n.jpg',
+          description: 'Hand-forged ornamental gate with intricate scrollwork and traditional design.'
         },
         {
-          title: 'Wrought Iron Railing',
-          image: '/images/featured-2.jpg',
-          description: 'Elegant staircase railing combining traditional blacksmithing with contemporary design.'
+          title: 'Ornamental Railing',
+          image: '@/assets/images/424444861_1132819214760675_7803895683058345713_n.jpg',
+          description: 'Elegant handrail crafted with attention to detail and functional design.'
         },
         {
-          title: 'Decorative Fire Pit',
-          image: '/images/featured-3.jpg',
-          description: 'Functional art piece designed to bring warmth and style to outdoor spaces.'
+          title: 'Custom Fireplace Tools',
+          image: '@/assets/images/448813202_1513391539287747_1063186017773658937_n.jpg',
+          description: 'Hand-crafted fireplace tools combining function and beautiful craftsmanship.'
         }
       ],
       testimonials: [
@@ -102,13 +109,21 @@ export default {
 </script>
 
 <style scoped>
-.hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 8rem 0;
-  text-align: center;
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust to your needs */
+  overflow: hidden;
+}
+
+.header-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;        /* Scale width to 100% of container */
+  height: 100%;       /* Scale height to 100% of container */
+  object-fit: cover;  /* Maintain aspect ratio while covering the area */
 }
 
 .hero-content h1 {

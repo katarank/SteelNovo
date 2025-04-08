@@ -1,0 +1,210 @@
+{
+  "nav": {
+    "home": "Home",
+    "gallery": "Galleria",
+    "about": "Chi Siamo",
+    "contact": "Contatti"
+  },
+  "home": {
+    "hero": {
+      "title": "SteelNovo Fabbri",
+      "subtitle": "Maestria Artigianale di Due Fratelli",
+      "description": "Forgiando la tradizione con artigianalità moderna dal 2010",
+      "motto": "L'arte del ferro è la fusione di forza e bellezza, di forma e funzione"
+    },
+    "buttons": {
+      "viewWork": "Vedi i Nostri Lavori",
+      "contactUs": "Contattaci",
+      "seeGallery": "Vedi Galleria Completa"
+    },
+    "featured": {
+      "title": "Lavori in Evidenza",
+      "items": {
+        "gate": {
+          "title": "Cancello Decorativo da Giardino",
+          "description": "Cancello ornamentale forgiato a mano con intricati motivi decorativi e design tradizionale."
+        },
+        "railing": {
+          "title": "Ringhiera Ornamentale",
+          "description": "Elegante ringhiera realizzata con attenzione ai dettagli e design funzionale."
+        },
+        "fireplace": {
+          "title": "Attrezzi Personalizzati per Camino",
+          "description": "Attrezzi per camino realizzati a mano che combinano funzionalità e bellezza artigianale."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Cosa Dicono i Nostri Clienti",
+      "clients": [
+        {
+          "quote": "I fratelli hanno creato una bellissima ringhiera personalizzata per la nostra casa che ha superato le nostre aspettative. La loro maestria è davvero eccezionale.",
+          "name": "Michael Johnson",
+          "location": "Portland, OR"
+        },
+        {
+          "quote": "Lavorare con SteelNovo è stato un piacere dall'inizio alla fine. Hanno ascoltato le nostre idee e le hanno trasformate in qualcosa di ancora migliore di quanto immaginassimo.",
+          "name": "Sarah Williams",
+          "location": "Seattle, WA"
+        },
+        {
+          "quote": "L'attenzione ai dettagli nel loro lavoro con i metalli è impareggiabile. Il nostro cancello da giardino non è solo funzionale ma un'opera d'arte che tutti commentano.",
+          "name": "Robert Miller",
+          "location": "Vancouver, BC"
+        }
+      ]
+    }
+  },
+  "gallery": {
+    "title": "La Nostra Galleria Lavori",
+    "description": "Scopri le nostre creazioni metalliche artigianali",
+    "filter": {
+      "all": "Tutti i Lavori",
+      "viewLarger": "Visualizza Più Grande"
+    },
+    "categories": {
+      "Gates": "Cancelli",
+      "Railings": "Ringhiere",
+      "Outdoor": "Esterni",
+      "Art": "Arte",
+      "Indoor": "Interni",
+      "Fences": "Recinzioni",
+      "Hardware": "Ferramenta"
+    },
+    "items": [
+      {
+        "title": "Cancello Decorativo da Giardino",
+        "description": "Cancello ornamentale forgiato a mano con intricati motivi decorativi e design tradizionale.",
+        "category": "Gates"
+      },
+      {
+        "title": "Scultura Metallica Personalizzata",
+        "description": "Opera metallica artistica che presenta tecniche di forgiatura tradizionali e design creativo.",
+        "category": "Art"
+      },
+      {
+        "title": "Ringhiera Ornamentale",
+        "description": "Elegante corrimano realizzato con attenzione ai dettagli e design funzionale.",
+        "category": "Railings"
+      },
+      {
+        "title": "Installazione Artistica in Metallo",
+        "description": "Notevole opera d'arte in metallo che mostra precisione artigianale e visione artistica.",
+        "category": "Art"
+      },
+      {
+        "title": "Cancello in Ferro Battuto",
+        "description": "Tradizionale cancello in ferro battuto con tecniche classiche da fabbro e durabilità.",
+        "category": "Gates"
+      },
+      {
+        "title": "Attrezzi Personalizzati per Camino",
+        "description": "Attrezzi per camino realizzati a mano che combinano funzionalità e bellezza artigianale.",
+        "category": "Indoor"
+      },
+      {
+        "title": "Opera d'Arte da Esterno",
+        "description": "Scultura metallica autoportante progettata per valorizzare gli spazi esterni.",
+        "category": "Outdoor"
+      },
+      {
+        "title": "Elemento Decorativo da Giardino",
+        "description": "Caratteristica artistica da giardino realizzata con tecniche tradizionali di lavorazione del ferro.",
+        "category": "Outdoor"
+      },
+      {
+        "title": "Maniglia Forgiata per Porta",
+        "description": "Maniglia per porta personalizzata che mostra meticolosa attenzione ai dettagli e funzionalità.",
+        "category": "Hardware"
+      },
+      {
+        "title": "Lavoro Tradizionale di Forgia",
+        "description": "Dimostrazione di tecniche classiche di lavorazione del ferro che mostrano l'artigianato in azione.",
+        "category": "Art"
+      }
+    ]
+  },
+  "about": {
+    "title": "Chi Siamo",
+    "subtitle": "La nostra storia e filosofia artigianale",
+    "story": {
+      "title": "La Nostra Storia",
+      "intro": "Due fratelli con una passione condivisa per la lavorazione dei metalli, che trasformano materie prime in arte funzionale dal 2010.",
+      "content1": "SteelNovo è stata fondata dai fratelli Michael e David Thompson, cresciuti guardando il loro nonno lavorare il metallo nella sua piccola officina. Quella che è iniziata come una fascinazione infantile si è evoluta in una passione di vita, portandoli a stabilire la propria attività di fabbri dopo anni di apprendistato e formazione professionale.",
+      "content2": "Con sede nel Pacific Northwest, combiniamo tecniche tradizionali di lavorazione del ferro con tecnologia moderna per creare pezzi unici, durevoli e bellissimi che raccontano una storia e resistono alla prova del tempo."
+    },
+    "philosophy": {
+      "title": "La Nostra Filosofia Artigianale",
+      "intro": "Crediamo nel valore senza tempo della qualità artigianale. Ogni pezzo che creiamo incarna tre principi fondamentali:",
+      "principles": {
+        "craftsmanship": "Artigianalità: Dedichiamo il tempo e l'attenzione necessari per creare pezzi di qualità eccezionale, con giunture e finiture impeccabili.",
+        "functionality": "Funzionalità: Oltre la bellezza, il nostro lavoro serve uno scopo, progettato per funzionare perfettamente per generazioni.",
+        "individuality": "Individualità: Non ci sono due pezzi identici. Ogni creazione porta i segni distintivi del lavoro artigianale ed è adattata alle specifiche esigenze dei nostri clienti."
+      }
+    },
+    "brothers": {
+      "title": "Conosciamo i Fratelli",
+      "michael": {
+        "name": "Michael Thompson",
+        "bio": "Con una formazione in belle arti e 15 anni di esperienza nella lavorazione del ferro, Michael è specializzato in elementi scultorei e decorativi. Il suo occhio per il design porta una visione artistica a ogni progetto."
+      },
+      "david": {
+        "name": "David Thompson",
+        "bio": "Ingegnere meccanico di formazione, David si concentra sull'integrità strutturale e sui componenti funzionali. La sua competenza tecnica assicura che ogni pezzo sia tanto durevole quanto bello."
+      }
+    },
+    "workshop": {
+      "title": "La Nostra Officina",
+      "description": "Situata appena fuori Portland, la nostra fucina combina strumenti tradizionali da fabbro con attrezzature moderne. Accogliamo visitatori su appuntamento per discutere progetti e testimoniare dal vivo il processo di creazione."
+    }
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Mettiti in contatto per discutere il tuo progetto",
+    "intro": {
+      "title": "Diamo Vita alla Tua Visione",
+      "lead": "Che tu abbia piani dettagliati o solo un'idea generale, ci piacerebbe sentire la tua voce.",
+      "description": "Ogni progetto inizia con una conversazione. Discuteremo le tue esigenze, tempistiche, budget e preferenze di design per assicurare che il pezzo finale corrisponda perfettamente alla tua visione."
+    },
+    "info": {
+      "title": "Informazioni di Contatto",
+      "address": "Via Vittorio Veneto 71, 24020 Cene BG, Italia",
+      "phone": "035 720005",
+      "email": "info@steelnovo.com",
+      "hours": "Lunedì - Venerdì: 9:00 - 17:00"
+    },
+    "social": {
+      "title": "Seguici"
+    },
+    "form": {
+      "title": "Inviaci un Messaggio",
+      "name": "Nome",
+      "email": "Email",
+      "phone": "Telefono (opzionale)",
+      "projectType": {
+        "label": "Tipo di Progetto",
+        "placeholder": "Seleziona il tipo di progetto",
+        "options": {
+          "gate": "Cancello",
+          "railing": "Ringhiera",
+          "furniture": "Arredamento",
+          "art": "Arte",
+          "other": "Altro"
+        }
+      },
+      "message": "Messaggio",
+      "submit": "Invia Messaggio",
+      "success": "Grazie per il tuo messaggio. Ti risponderemo al più presto!"
+    },
+    "map": {
+      "title": "Trovaci",
+      "placeholder": "La mappa sarebbe incorporata qui"
+    }
+  },
+  "footer": {
+    "tagline": "Forgiando la tradizione con artigianalità moderna dal 2010.",
+    "contact": "Contatti",
+    "quickLinks": "Collegamenti Rapidi",
+    "copyright": "© 2025 SteelNovo Fabbri. Tutti i diritti riservati."
+  }
+}

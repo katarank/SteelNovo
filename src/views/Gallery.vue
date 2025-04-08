@@ -2,8 +2,8 @@
   <div class="gallery">
     <div class="page-header">
       <div class="container">
-        <h1>Our Work Gallery</h1>
-        <p>Discover our handcrafted metalwork creations</p>
+        <h1>{{ $t('gallery.title') }}</h1>
+        <p>{{ $t('gallery.description') }}</p>
       </div>
     </div>
 
@@ -13,7 +13,7 @@
           class="btn btn-outline-dark me-2 mb-2" 
           :class="{ 'active': activeCategory === 'all' }" 
           @click="filterGallery('all')">
-          All Works
+          {{ $t('gallery.filter.all') }}
         </button>
         <button 
           v-for="category in categories" 
@@ -21,7 +21,7 @@
           class="btn btn-outline-dark me-2 mb-2" 
           :class="{ 'active': activeCategory === category }" 
           @click="filterGallery(category)">
-          {{ category }}
+          {{ $t(`gallery.categories.${category}`) }}
         </button>
       </div>
 
@@ -37,14 +37,14 @@
               <div class="overlay" @click="openLightbox(index)">
                 <div class="overlay-content">
                   <i class="fas fa-search-plus"></i>
-                  <p>View Larger</p>
+                  <p>{{ $t('gallery.filter.viewLarger') }}</p>
                 </div>
               </div>
             </div>
             <div class="card-body">
               <h5 class="card-title">{{ item.title }}</h5>
               <p class="card-text">{{ item.description }}</p>
-              <span class="badge bg-secondary">{{ item.category }}</span>
+              <span class="badge bg-secondary">{{ $t(`gallery.categories.${item.category}`) }}</span>
             </div>
           </div>
         </div>
@@ -70,71 +70,33 @@
 </template>
 
 <script>
+import galleryItems from '../data/galleryItems.js';
+
 export default {
   name: 'Gallery',
   data() {
     return {
       activeCategory: 'all',
       selectedItem: null,
-      galleryItems: [
-        {
-          title: 'Custom Metal Gate',
-          image: '/images/gallery-1.jpg',
-          category: 'Gates',
-          description: 'Hand-forged ornamental gate with intricate scrollwork and nature-inspired motifs.'
-        },
-        {
-          title: 'Wrought Iron Railing',
-          image: '/images/gallery-2.jpg',
-          category: 'Railings',
-          description: 'Elegant staircase railing combining traditional blacksmithing with contemporary design.'
-        },
-        {
-          title: 'Decorative Fire Pit',
-          image: '/images/gallery-3.jpg',
-          category: 'Outdoor',
-          description: 'Functional art piece designed to bring warmth and style to outdoor spaces.'
-        },
-        {
-          title: 'Metal Wall Art',
-          image: '/images/gallery-4.jpg',
-          category: 'Art',
-          description: 'Abstract metal wall sculpture with flowing lines and balanced composition.'
-        },
-        {
-          title: 'Garden Trellis',
-          image: '/images/gallery-5.jpg',
-          category: 'Outdoor',
-          description: 'Custom-designed garden trellis featuring climbing plant supports.'
-        },
-        {
-          title: 'Ornamental Fence',
-          image: '/images/gallery-6.jpg',
-          category: 'Fences',
-          description: 'Decorative metal fence with custom design elements for a private residence.'
-        },
-        {
-          title: 'Custom Fireplace Screen',
-          image: '/images/gallery-7.jpg',
-          category: 'Indoor',
-          description: 'Hand-forged fireplace screen with nature-inspired elements.'
-        },
-        {
-          title: 'Metal Sculpture',
-          image: '/images/gallery-8.jpg',
-          category: 'Art',
-          description: 'Freestanding sculpture combining welding and forging techniques.'
-        },
-        {
-          title: 'Driveway Gate',
-          image: '/images/gallery-9.jpg',
-          category: 'Gates',
-          description: 'Grand entrance gate designed for durability and visual impact.'
-        }
-      ]
+      rawGalleryItems: galleryItems
     }
   },
   computed: {
+    galleryItems() {
+      // Get current locale
+      const currentLocale = this.$i18n.locale;
+      
+      return this.rawGalleryItems.map(item => {
+        return {
+          image: item.src,
+          alt: item.alt,
+          category: item.category,
+          // Use current language or fallback to English
+          title: item.title[currentLocale] || item.title.en,
+          description: item.description[currentLocale] || item.description.en
+        };
+      });
+    },
     categories() {
       const categorySet = new Set(this.galleryItems.map(item => item.category));
       return Array.from(categorySet);
@@ -153,18 +115,23 @@ export default {
     },
     openLightbox(index) {
       this.selectedItem = this.filteredGalleryItems[index];
-      // Bootstrap modal activation would go here in a real implementation
+      // Use Bootstrap 5 method to show the modal
+      const myModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+      myModal.show();
     }
   },
   mounted() {
-    // In a real implementation, you would initialize the Bootstrap modal here
+    // Import Bootstrap's JavaScript dynamically when component is mounted
+    import('bootstrap').then(bootstrap => {
+      window.bootstrap = bootstrap;
+    });
   }
 }
 </script>
 
 <style scoped>
 .page-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/gallery-header.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
   background-position: center;
   color: white;

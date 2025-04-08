@@ -1,0 +1,215 @@
+{
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "SteelNovo Blacksmith",
+      "subtitle": "Master Craftsmanship by Two Brothers",
+      "description": "Forging tradition with modern craftsmanship since 2010",
+      "motto": "The art of iron is the fusion of strength and beauty, of form and function"
+    },
+    "buttons": {
+      "viewWork": "View Our Work",
+      "contactUs": "Contact Us",
+      "seeGallery": "See Full Gallery"
+    },
+    "featured": {
+      "title": "Featured Works",
+      "items": {
+        "gate": {
+          "title": "Decorative Garden Gate",
+          "description": "Hand-forged ornamental gate with intricate scrollwork and traditional design."
+        },
+        "railing": {
+          "title": "Ornamental Railing",
+          "description": "Elegant handrail crafted with attention to detail and functional design."
+        },
+        "fireplace": {
+          "title": "Custom Fireplace Tools",
+          "description": "Hand-crafted fireplace tools combining function and beautiful craftsmanship."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "clients": [
+        {
+          "quote": "The brothers created a beautiful custom railing for our home that exceeded our expectations. Their craftsmanship is truly exceptional.",
+          "name": "Michael Johnson",
+          "location": "Portland, OR"
+        },
+        {
+          "quote": "Working with SteelNovo was a pleasure from start to finish. They listened to our ideas and transformed them into something even better than we imagined.",
+          "name": "Sarah Williams",
+          "location": "Seattle, WA"
+        },
+        {
+          "quote": "The attention to detail in their metalwork is unmatched. Our garden gate is not just functional but a work of art that everyone comments on.",
+          "name": "Robert Miller",
+          "location": "Vancouver, BC"
+        }
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Our Work Gallery",
+    "description": "Discover our handcrafted metalwork creations",
+    "filter": {
+      "all": "All Works",
+      "viewLarger": "View Larger"
+    },
+    "categories": {
+      "Gates": "Gates",
+      "Railings": "Railings",
+      "Outdoor": "Outdoor",
+      "Art": "Art",
+      "Indoor": "Indoor",
+      "Fences": "Fences",
+      "Hardware": "Hardware"
+    },
+    "items": [
+      {
+        "title": "Decorative Garden Gate",
+        "description": "Hand-forged ornamental gate with intricate scrollwork and traditional design.",
+        "category": "Gates"
+      },
+      {
+        "title": "Custom Metal Sculpture",
+        "description": "Artistic metalwork featuring traditional forging techniques and creative design.",
+        "category": "Art"
+      },
+      {
+        "title": "Ornamental Railing",
+        "description": "Elegant handrail crafted with attention to detail and functional design.",
+        "category": "Railings"
+      },
+      {
+        "title": "Metal Art Installation",
+        "description": "Striking metal artwork showcasing precision craftsmanship and artistic vision.",
+        "category": "Art"
+      },
+      {
+        "title": "Wrought Iron Gate",
+        "description": "Traditional wrought iron gate with classic blacksmith techniques and durability.",
+        "category": "Gates"
+      },
+      {
+        "title": "Custom Fireplace Tools",
+        "description": "Hand-crafted fireplace tools combining function and beautiful craftsmanship.",
+        "category": "Indoor"
+      },
+      {
+        "title": "Outdoor Art Piece",
+        "description": "Freestanding metal sculpture designed to enhance outdoor spaces.",
+        "category": "Outdoor"
+      },
+      {
+        "title": "Decorative Garden Element",
+        "description": "Artistic garden feature crafted with traditional blacksmithing techniques.",
+        "category": "Outdoor"
+      },
+      {
+        "title": "Forged Door Handle",
+        "description": "Custom door handle showcasing meticulous attention to detail and functionality.",
+        "category": "Hardware"
+      },
+      {
+        "title": "Traditional Forge Work",
+        "description": "Demonstration of classic blacksmithing techniques showing the craft in action.",
+        "category": "Art"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Our story and craft philosophy",
+    "story": {
+      "title": "Our Story",
+      "intro": "Two brothers with a shared passion for metalwork, transforming raw materials into functional art since 2010.",
+      "content1": "SteelNovo was founded by brothers Michael and David Thompson, who grew up watching their grandfather work metal in his small workshop. What started as a childhood fascination evolved into a lifelong passion, leading them to establish their own blacksmith business after years of apprenticeship and formal training.",
+      "content2": "Based in the Pacific Northwest, we combine traditional blacksmithing techniques with modern technology to create unique, durable, and beautiful metalwork pieces that tell a story and stand the test of time."
+    },
+    "philosophy": {
+      "title": "Our Craft Philosophy",
+      "intro": "We believe in the timeless value of handcrafted quality. Each piece we create embodies three core principles:",
+      "principles": {
+        "craftsmanship": "Craftsmanship: We dedicate the time and attention necessary to create pieces of exceptional quality, with impeccable joinery and finishing.",
+        "functionality": "Functionality: Beyond beauty, our work serves a purpose, designed to function flawlessly for generations.",
+        "individuality": "Individuality: No two pieces are identical. Each creation bears the distinctive marks of handcrafted work and is tailored to our clients' specific needs."
+      }
+    },
+    "brothers": {
+      "title": "Meet the Brothers",
+      "michael": {
+        "name": "Michael Thompson",
+        "bio": "With a background in fine arts and 15 years of blacksmithing experience, Michael specializes in sculptural and decorative elements. His eye for design brings artistic vision to each project."
+      },
+      "david": {
+        "name": "David Thompson",
+        "bio": "A mechanical engineer by training, David focuses on structural integrity and functional components. His technical expertise ensures that every piece is as durable as it is beautiful."
+      }
+    },
+    "workshop": {
+      "title": "Our Workshop",
+      "description": "Located just outside Portland, our forge combines traditional blacksmith tools with modern equipment. We welcome visitors by appointment to discuss projects and witness the crafting process firsthand."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch to discuss your project",
+    "intro": {
+      "title": "Let's Bring Your Vision to Life",
+      "lead": "Whether you have detailed plans or just a general idea, we'd love to hear from you.",
+      "description": "Each project begins with a conversation. We'll discuss your needs, timeline, budget, and design preferences to ensure that the final piece perfectly matches your vision."
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Via Vittorio Veneto 71, 24020 Cene BG, Italy",
+      "phone": "035 720005",
+      "email": "info@steelnovo.com",
+      "hours": "Monday - Friday: 9:00 AM - 5:00 PM"
+    },
+    "social": {
+      "title": "Follow Us"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "projectType": {
+        "label": "Project Type",
+        "placeholder": "Select project type",
+        "options": {
+          "gate": "Gate",
+          "railing": "Railing",
+          "furniture": "Furniture",
+          "art": "Art",
+          "other": "Other"
+        }
+      },
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Thank you for your message. We will get back to you soon!"
+    },
+    "map": {
+      "title": "Find Us",
+      "placeholder": "Map would be embedded here"
+    }
+  },
+  "footer": {
+    "tagline": "Forging tradition with modern craftsmanship since 2010.",
+    "motto": "The art of iron is the fusion of strength and beauty, of form and function",
+    "contact": "Contact",
+    "quickLinks": "Quick Links",
+    "copyright": "© 2025 SteelNovo Blacksmith. All rights reserved.",
+    "additionalInfo": "Family-owned business with handcrafted quality"
+  },
+  "errors": {
+    "videoLoadFailed": "Video could not be loaded. Please refresh the page or continue browsing."
+  }
+}
