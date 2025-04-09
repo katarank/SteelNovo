@@ -9,9 +9,8 @@
     <div class="container py-5">
       <div class="row mb-5">
           <h2>Our Story</h2>
-          <p class="lead">Two brothers with a shared passion for blacksmithing, transforming raw materials into functional art since 2010.</p>
-          <p>SteelNovo was founded by brothers Michael and David Thompson, who grew up watching their grandfather work metal in his small workshop. What started as a childhood fascination evolved into a lifelong passion, leading them to establish their own blacksmith business after years of apprenticeship and formal training.</p>
-          <p>Based in the Pacific Northwest, we combine traditional blacksmithing techniques with modern technology to create unique, durable, and beautiful metalwork pieces that tell a story and stand the test of time.</p>
+          <p class="lead">Two brothers with a shared passion for blacksmithing, transforming raw materials into functional art since 2011.</p>
+          <p>SteelNovo was founded by brothers Omar and Davide Guerini, who grew up watching their father work metal in his small workshop. What started as a childhood fascination evolved into a lifelong passion, leading them to establish their own blacksmith business after years of apprenticeship and formal training.</p>
       </div>
 
       <div class="row mb-5">
@@ -30,18 +29,18 @@
         </div>
         <div class="col-md-6">
           <div class="card mb-4">
-            <img src="@/assets/images/logo.svg" alt="Michael Thompson" class="card-img-top">
+            <img src="@/assets/images/logo.svg" alt="Omar Guerini" class="card-img-top">
             <div class="card-body">
-              <h3 class="card-title">Michael Thompson</h3>
-              <p class="card-text">With a background in fine arts and 15 years of blacksmithing experience, Michael specializes in sculptural and decorative elements. His eye for design brings artistic vision to each project.</p>
+              <h3 class="card-title">Omar Guerini</h3>
+              <p class="card-text">With a background in fine arts and 15 years of blacksmithing experience, Omar specializes in sculptural and decorative elements. His eye for design brings artistic vision to each project.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card mb-4">
-            <img src="@/assets/images/logo.svg" alt="David Thompson" class="card-img-top">
+            <img src="@/assets/images/logo.svg" alt="Davide Guerini" class="card-img-top">
             <div class="card-body">
-              <h3 class="card-title">David Thompson</h3>
+              <h3 class="card-title">Davide Guerini</h3>
               <p class="card-text">A mechanical engineer by training, David focuses on structural integrity and functional components. His technical expertise ensures that every piece is as durable as it is beautiful.</p>
             </div>
           </div>
@@ -83,7 +82,7 @@ export default {
   background-size: cover;
   background-position: center;
   color: white;
-  height: 30vh;
+  height: 35vh;
   padding: 5rem 0;
   text-align: center;
 }
@@ -108,29 +107,11 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.about-image {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .workshop-section {
   margin-top: 3rem;
 }
 
 .workshop-images {
   margin-top: 2rem;
-}
-
-@media (max-width: 767px) {
-  .about-image {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .order-lg-1 {
-    margin-top: 2rem;
-  }
 }
 </style>

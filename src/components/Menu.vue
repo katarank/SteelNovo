@@ -26,25 +26,21 @@ const goToHome = async () => {
           <li class="nav-item mx-3">
             <router-link to="/" class="nav-link" exact-active-class="active">{{ $t('nav.home') }}</router-link>
           </li>
-          
-          <!-- Gallery -->
+
           <li class="nav-item mx-3">
             <router-link to="/gallery" class="nav-link" active-class="active">{{ $t('nav.gallery') }}</router-link>
           </li>
-          
-          <!-- Logo (centered) -->
+
           <li class="nav-item mx-3">
             <a href="#" @click.prevent="goToHome">
-              <img src="@/assets/images/logo.svg" alt="SteelNovo" height="50" class="d-inline-block align-top">
+              <img src="@/assets/images/only-logo.png" alt="SteelNovo" height="50" class="d-inline-block align-top">
             </a>
           </li>
-          
-          <!-- About Us -->
+
           <li class="nav-item mx-3">
             <router-link to="/about" class="nav-link" active-class="active">{{ $t('nav.about') }}</router-link>
           </li>
-          
-          <!-- Contact -->
+
           <li class="nav-item mx-3">
             <router-link to="/contact" class="nav-link" active-class="active">{{ $t('nav.contact') }}</router-link>
           </li>
@@ -75,7 +71,7 @@ const goToHome = async () => {
   align-items: center;
 }
 
-.navbar-dark .navbar-nav .nav-link.active {
+.navbar-dark .navbar-nav .nav-link:active {
   color: rgba(255, 89, 0, 0.72);
 }
 </style>

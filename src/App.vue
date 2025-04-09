@@ -1,7 +1,5 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import Menu from '@/components/Menu.vue'
 
 // Import Bootstrap CSS
@@ -68,7 +66,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
   position: relative;
   width: 100%;
 }
-body, #app {
+body {
+  max-width: unset !important;
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;

@@ -124,7 +124,7 @@ export default {
 .page-header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
-  height: 30vh;
+  height: 35vh;
   background-position: center;
   color: white;
   text-align: center;
