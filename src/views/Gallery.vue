@@ -1,12 +1,11 @@
 <template>
-  <div class="gallery">
+  <div>
     <div class="page-header">
       <div class="container">
         <h1>{{ $t('gallery.title') }}</h1>
         <p>{{ $t('gallery.description') }}</p>
       </div>
     </div>
-
     <div class="container py-5">
       <div class="filter-buttons mb-5">
         <button 
@@ -135,6 +134,7 @@ export default {
   background-size: cover;
   background-position: center;
   color: white;
+  height: 30vh;
   padding: 5rem 0;
   text-align: center;
 }

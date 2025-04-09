@@ -1,12 +1,11 @@
 <template>
-  <div class="contact">
+  <div>
     <div class="page-header">
       <div class="container">
         <h1>{{ $t('contact.title') }}</h1>
         <p>{{ $t('contact.subtitle') }}</p>
       </div>
     </div>
-    
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-6 mb-4">
@@ -39,7 +38,7 @@
           <div class="social-media mt-4">
             <h3>{{ $t('contact.social.title') }}</h3>
             <div class="social-icons">
-              <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.instagram.com/guerini_steelnovo/" target="_blank" rel="noopener noreferrer" class="me-3"><i class="bi bi-instagram"></i></a>
               <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
               <a href="#" class="me-3"><i class="bi bi-pinterest"></i></a>
             </div>
@@ -141,8 +140,9 @@ export default {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
   background-position: center;
-  color: white;
   padding: 5rem 0;
+  height: 30vh;
+  color: white;
   text-align: center;
 }
 

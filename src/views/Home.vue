@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <div class="page-header">
         <VideoPlayer
             :videoSrc="menuVideo"
@@ -124,16 +124,10 @@ export default {
 .page-header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
+  height: 30vh;
   background-position: center;
   color: white;
   text-align: center;
-}
-
-.home {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .content-wrapper {

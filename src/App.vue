@@ -11,21 +11,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 // Import Bootstrap JS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
-// Initialize i18n
-const { locale } = useI18n()
-const currentLocale = computed(() => locale.value)
-
 </script>
 
 <template>
   <div class="app-container d-flex flex-column min-vh-100">
-    <!-- Use the Menu component -->
-    <Menu />
-
-    <main class="flex-grow-1">
+    <Menu class="menu"/>
+    <div class="page">
       <RouterView />
-    </main>
-
+    </div>
     <footer class="bg-dark text-white py-4 mt-auto">
       <div class="container">
         <div class="row">
@@ -64,8 +57,19 @@ const currentLocale = computed(() => locale.value)
 </template>
 
 <style>
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.page {
+  position: relative;
+  width: 100%;
+}
 body, #app {
-  max-width: 100vw !important;
+  width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
 }
