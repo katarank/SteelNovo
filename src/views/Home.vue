@@ -1,28 +1,16 @@
 <template>
   <div class="home">
-    <div class="video-container">
-      <video 
-          ref="videoElement"
-          src="@/assets/videos/mock-menu-video.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-          preload="auto"
-          class="header-video"
-          @loadeddata="handleVideoLoaded"
-          @error="handleVideoError">
-      </video>
-      <div v-if="videoError" class="video-fallback">
-          <!-- Fallback content if video fails to load -->
-          <div class="video-error-message">
-            <p>{{ $t('errors.videoLoadFailed') }}</p>
-          </div>
-      </div>
+    <div class="page-header">
+        <VideoPlayer
+            :videoSrc="menuVideo"
+            @videoLoaded="onVideoLoaded"
+            @videoError="onVideoError"
+        />
     </div>
-    
-    <section class="featured-works py-5">
-      <div class="container">
+
+    <div class="content-wrapper">
+      <section class="featured-works py-5">
+        <div class="container">
         <h2 class="section-title">Featured Works</h2>
         <div class="row g-4">
           <div class="col-md-4" v-for="(item, index) in featuredItems" :key="index">
@@ -61,31 +49,32 @@
         </div>
       </div>
     </section>
+    </div>
   </div>
 </template>
 
 <script>
+import galleryItems from '../data/galleryItems.js';
+import menuVideo from '@/assets/videos/mock-menu-video.mp4';
+import VideoPlayer from '@/components/VideoPlayer.vue';
+
 export default {
   name: 'Home',
+  components: {
+    VideoPlayer
+  },
+  methods: {
+    onVideoLoaded() {
+      console.log('Video loaded successfully');
+    },
+    onVideoError(error) {
+      console.error('Video error in Home component:', error);
+    }
+  },
   data() {
     return {
-      featuredItems: [
-        {
-          title: 'Decorative Garden Gate',
-          image: '@/assets/images/416090964_333012463031148_8278810173838462944_n.jpg',
-          description: 'Hand-forged ornamental gate with intricate scrollwork and traditional design.'
-        },
-        {
-          title: 'Ornamental Railing',
-          image: '@/assets/images/424444861_1132819214760675_7803895683058345713_n.jpg',
-          description: 'Elegant handrail crafted with attention to detail and functional design.'
-        },
-        {
-          title: 'Custom Fireplace Tools',
-          image: '@/assets/images/448813202_1513391539287747_1063186017773658937_n.jpg',
-          description: 'Hand-crafted fireplace tools combining function and beautiful craftsmanship.'
-        }
-      ],
+      menuVideo,
+      rawGalleryItems: galleryItems,
       testimonials: [
         {
           quote: "The brothers created a beautiful custom railing for our home that exceeded our expectations. Their craftsmanship is truly exceptional.",
@@ -104,37 +93,53 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    // Process gallery items with proper localization
+    galleryItems() {
+      // Get current locale
+      const currentLocale = this.$i18n.locale;
+      
+      return this.rawGalleryItems.map(item => {
+        return {
+          image: item.src,
+          alt: item.alt,
+          category: item.category,
+          // Use current language or fallback to English
+          title: item.title[currentLocale] || item.title.en,
+          description: item.description[currentLocale] || item.description.en
+        };
+      });
+    },
+    // Get only the first 3 items for featured section
+    featuredItems() {
+      return this.galleryItems.slice(0, 3);
+    }
   }
 }
 </script>
 
 <style scoped>
-.video-container {
+
+.page-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.home {
   position: relative;
+  min-height: 100vh;
   width: 100%;
-  height: 100vh; /* Adjust to your needs */
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-.header-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;        /* Scale width to 100% of container */
-  height: 100%;       /* Scale height to 100% of container */
-  object-fit: cover;  /* Maintain aspect ratio while covering the area */
-}
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.hero-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+.content-wrapper {
+  position: relative;
+  z-index: 3; /* Higher than video but lower than navbar (if navbar has higher z-index) */
+  width: 100%;
 }
 
 .section-title {

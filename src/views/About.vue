@@ -17,7 +17,7 @@
         </div>
         <div class="col-lg-6">
           <div class="about-image">
-            <img src="@/assets/images/brothers-workshop.jpg" alt="The Thompson brothers in their workshop" class="img-fluid rounded shadow">
+            <img src="@/assets/images/logo.svg" alt="The Thompson brothers in their workshop" class="img-fluid rounded shadow">
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="about-image">
-            <img src="@/assets/images/forge-work.jpg" alt="Hot metal being forged" class="img-fluid rounded shadow">
+            <img src="@/assets/images/logo.svg" alt="Hot metal being forged" class="img-fluid rounded shadow">
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
         </div>
         <div class="col-md-6">
           <div class="card mb-4">
-            <img src="@/assets/images/michael.jpg" alt="Michael Thompson" class="card-img-top">
+            <img src="@/assets/images/logo.svg" alt="Michael Thompson" class="card-img-top">
             <div class="card-body">
               <h3 class="card-title">Michael Thompson</h3>
               <p class="card-text">With a background in fine arts and 15 years of blacksmithing experience, Michael specializes in sculptural and decorative elements. His eye for design brings artistic vision to each project.</p>
@@ -54,7 +54,7 @@
         </div>
         <div class="col-md-6">
           <div class="card mb-4">
-            <img src="@/assets/images/david.jpg" alt="David Thompson" class="card-img-top">
+            <img src="@/assets/images/logo.svg" alt="David Thompson" class="card-img-top">
             <div class="card-body">
               <h3 class="card-title">David Thompson</h3>
               <p class="card-text">A mechanical engineer by training, David focuses on structural integrity and functional components. His technical expertise ensures that every piece is as durable as it is beautiful.</p>
@@ -72,13 +72,13 @@
         </div>
         <div class="row g-3 workshop-images">
           <div class="col-md-4">
-            <img src="@/assets/images/workshop-1.jpg" alt="Workshop forge" class="img-fluid rounded">
+            <img src="@/assets/images/logo.svg" alt="Workshop forge" class="img-fluid rounded">
           </div>
           <div class="col-md-4">
-            <img src="@/assets/images/workshop-2.jpg" alt="Workshop tools" class="img-fluid rounded">
+            <img src="@/assets/images/logo.svg" alt="Workshop tools" class="img-fluid rounded">
           </div>
           <div class="col-md-4">
-            <img src="@/assets/images/workshop-3.jpg" alt="Workshop overview" class="img-fluid rounded">
+            <img src="@/assets/images/logo.svg" alt="Workshop overview" class="img-fluid rounded">
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@ export default {
 
 <style scoped>
 .page-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('@/assets/images/about-header.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
   background-position: center;
   color: white;
