@@ -71,7 +71,7 @@ const goToHome = async () => {
   align-items: center;
 }
 
-.navbar-dark .navbar-nav .nav-link:active {
+.navbar-dark .navbar-nav .nav-link.active {
   color: rgba(255, 89, 0, 0.72);
 }
 </style>

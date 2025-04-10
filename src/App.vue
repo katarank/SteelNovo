@@ -40,8 +40,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
             <h5>{{ $t('footer.quickLinks') }}</h5>
             <ul class="list-unstyled">
               <li><router-link to="/gallery" class="text-white">{{ $t('nav.gallery') }}</router-link></li>
-              <li><router-link to="/about" class="text-white">{{ $t('nav.about') }}</router-link></li>
-              <li><router-link to="/contact" class="text-white">{{ $t('nav.contact') }}</router-link></li>
+<!--              <li><router-link to="/about" class="text-white">{{ $t('nav.about') }}</router-link></li>
+              <li><router-link to="/contact" class="text-white">{{ $t('nav.contact') }}</router-link></li>-->
             </ul>
           </div>
         </div>
@@ -66,7 +66,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
   position: relative;
   width: 100%;
 }
-body {
+body, #app {
   max-width: unset !important;
   width: 100% !important;
   margin: 0 !important;
