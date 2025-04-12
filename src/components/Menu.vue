@@ -1,16 +1,15 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
+import router from "@/router/index.js";
 
-// Initialize i18n and router
+// Initialize i18n
 const { locale } = useI18n()
-const router = useRouter()
 const currentLocale = computed(() => locale.value)
 
-// Function to navigate to home page instead of refreshing
-const goToHome = () => {
-  router.push('/')
+// Function to refresh the application
+const goToHome = async () => {
+  await router.push('/')
 }
 </script>
 
@@ -24,29 +23,25 @@ const goToHome = () => {
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 d-flex justify-content-center align-items-center">
           <!-- Home -->
-          <li class="nav-item mx-1">
+          <li class="nav-item mx-3">
             <router-link to="/" class="nav-link" exact-active-class="active">{{ $t('nav.home') }}</router-link>
           </li>
-          
-          <!-- Gallery -->
-          <li class="nav-item mx-1">
+
+          <li class="nav-item mx-3">
             <router-link to="/gallery" class="nav-link" active-class="active">{{ $t('nav.gallery') }}</router-link>
           </li>
-          
-          <!-- Logo (centered) -->
-          <li class="nav-item mx-2">
+
+          <li class="nav-item mx-3">
             <a href="#" @click.prevent="goToHome">
-              <img src="@/assets/images/logo.jpg" alt="SteelNovo" height="50" class="d-inline-block align-top">
+              <img src="@/assets/images/only-logo.png" alt="SteelNovo" height="50" class="d-inline-block align-top">
             </a>
           </li>
-          
-          <!-- About Us -->
-          <li class="nav-item mx-1">
+
+          <li class="nav-item mx-3">
             <router-link to="/about" class="nav-link" active-class="active">{{ $t('nav.about') }}</router-link>
           </li>
-          
-          <!-- Contact -->
-          <li class="nav-item mx-1">
+
+          <li class="nav-item mx-3">
             <router-link to="/contact" class="nav-link" active-class="active">{{ $t('nav.contact') }}</router-link>
           </li>
         </ul>
@@ -59,14 +54,11 @@ const goToHome = () => {
 <style scoped>
 /* Navigation styles */
 .navbar {
-  position: relative;
-  background-color: black;
-  width: 100%;
-  z-index: 1000; /* Ensures navbar is above other content */
-  top: 0;
+  background-color: transparent;
 }
 
 .navbar-dark .navbar-nav .nav-link {
+  color: white;
   text-transform: uppercase; /* Make menu items uppercase */
   font-weight: bold; /* Make menu items bold */
 }

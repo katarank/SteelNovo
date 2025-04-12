@@ -20,11 +20,10 @@ const currentLocale = computed(() => locale.value)
 <template>
   <div class="app-container d-flex flex-column min-vh-100">
     <!-- Use the Menu component -->
-    <Menu />
-
-    <main class="flex-grow-1">
+    <Menu class="menu"/>
+    <div class="page">
       <RouterView />
-    </main>
+    </div>
 
     <footer class="bg-dark text-white py-4 mt-auto">
       <div class="container">
@@ -65,14 +64,20 @@ const currentLocale = computed(() => locale.value)
 
 <style>
 /* App container styles */
-.app-container {
-  height: 100vh;
-  width: 100vh;
-  display: flex;
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
-
+.page {
+  position: relative;
+  width: 100%;
+}
 body, #app {
-  max-width: 100vw !important;
+  max-width: unset !important;
+  width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
 }

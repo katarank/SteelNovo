@@ -29,7 +29,7 @@
         </div>
         <div class="col-md-6">
           <div class="card mb-4">
-            <img src="@/assets/images/logo.svg" alt="Omar Guerini" class="card-img-top">
+            <img src="@/assets/images/only-logo.png" alt="Omar Guerini" class="card-img-top">
             <div class="card-body">
               <h3 class="card-title">Omar Guerini</h3>
               <p class="card-text">With a background in fine arts and 15 years of blacksmithing experience, Omar specializes in sculptural and decorative elements. His eye for design brings artistic vision to each project.</p>
@@ -38,7 +38,7 @@
         </div>
         <div class="col-md-6">
           <div class="card mb-4">
-            <img src="@/assets/images/logo.svg" alt="Davide Guerini" class="card-img-top">
+            <img src="@/assets/images/only-logo.png" alt="Davide Guerini" class="card-img-top">
             <div class="card-body">
               <h3 class="card-title">Davide Guerini</h3>
               <p class="card-text">A mechanical engineer by training, David focuses on structural integrity and functional components. His technical expertise ensures that every piece is as durable as it is beautiful.</p>
@@ -56,13 +56,13 @@
         </div>
         <div class="row g-3 workshop-images">
           <div class="col-md-4">
-            <img src="@/assets/images/logo.svg" alt="Workshop forge" class="img-fluid rounded">
+            <img src="@/assets/images/only-logo.png" alt="Workshop forge" class="img-fluid rounded">
           </div>
           <div class="col-md-4">
-            <img src="@/assets/images/logo.svg" alt="Workshop tools" class="img-fluid rounded">
+            <img src="@/assets/images/only-logo.png" alt="Workshop tools" class="img-fluid rounded">
           </div>
           <div class="col-md-4">
-            <img src="@/assets/images/logo.svg" alt="Workshop overview" class="img-fluid rounded">
+            <img src="@/assets/images/only-logo.png" alt="Workshop overview" class="img-fluid rounded">
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@ export default {
   background-size: cover;
   background-position: center;
   color: white;
-  height: 35vh;
+  height: 40vh;
   padding: 5rem 0;
   text-align: center;
 }
