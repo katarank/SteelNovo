@@ -24,21 +24,7 @@
       "seeGallery": "See Full Gallery"
     },
     "featured": {
-      "title": "Featured Works",
-      "items": {
-        "library": {
-          "title": "Decorative Indoor Library",
-          "description": "Hand-forged ornamental library with intricate scrollwork and hexagonal design."
-        },
-        "cactus-art": {
-          "title": "Cactus Art Sculpture",
-          "description": "Unique metal sculpture inspired by the beauty of cacti, showcasing intricate details."
-        },
-        "wave-shelf": {
-          "title": "Wave Shelf",
-          "description": "A beautifully crafted shelf inspired by ocean waves, combining functionality with artistic design."
-        }
-      }
+      "title": "Featured Works"
     }
   },
   "gallery": {
@@ -47,15 +33,6 @@
     "filter": {
       "all": "All Works",
       "viewLarger": "View Larger"
-    },
-    "categories": {
-      "Gates": "Gates",
-      "Railings": "Railings",
-      "Outdoor": "Outdoor",
-      "Art": "Art",
-      "Indoor": "Indoor",
-      "Fences": "Fences",
-      "Hardware": "Hardware"
     }
   },
   "about": {

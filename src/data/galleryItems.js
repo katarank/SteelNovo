@@ -1,122 +1,98 @@
 export default [
   {
-    src: new URL('../assets/images/exagonal-library.jpg', import.meta.url).href,
+    src: new URL('../assets/images/hexagonal-library.jpg', import.meta.url).href,
     alt: 'Decorative Garden Gate',
     title: {
-      en: 'Decorative Garden Gate',
-      it: 'Cancello Decorativo da Giardino'
+      en: 'Decorative Indoor Library',
+      it: 'Libreria Decorativa da Interni'
     },
     description: {
-      en: 'Hand-forged ornamental gate with intricate scrollwork and traditional design.',
-      it: 'Cancello ornamentale forgiato a mano con intricati motivi decorativi e design tradizionale.'
+      en: 'Hand-forged ornamental library with hexagonal design',
+      it: 'Libreria ornamentale dal design esagonale'
     }
   },
   {
-    src: new URL('../assets/images/420576250_6860502140727790_7212253546683085489_n.jpg', import.meta.url).href,
+    src: new URL('../assets/images/cactus-art-sculpture.jpg', import.meta.url).href,
     alt: 'Custom Metal Sculpture',
     title: {
-      en: 'Custom Metal Sculpture',
-      it: 'Scultura Metallica Personalizzata'
+      en: 'Cactus Art Sculpture',
+      it: 'Arte Cactus'
     },
     description: {
-      en: 'Artistic metalwork featuring traditional forging techniques and creative design.',
-      it: 'Opera metallica artistica che presenta tecniche di forgiatura tradizionali e design creativo.'
+      en: 'Unique metal sculpture inspired by the beauty of cacti, showcasing intricate details',
+      it: 'Scultura artistica in metallo a forma di cactus, un\'aggiunta unica per ogni spazio'
     }
   },
   {
-    src: new URL('../assets/images/424444861_1132819214760675_7803895683058345713_n.jpg', import.meta.url).href,
+    src: new URL('../assets/images/wave-shelf.jpg', import.meta.url).href,
     alt: 'Ornamental Railing',
     title: {
       en: 'Ornamental Railing',
-      it: 'Ringhiera Ornamentale'
+      it: 'Mensola a Onde'
     },
     description: {
-      en: 'Elegant handrail crafted with attention to detail and functional design.',
-      it: 'Elegante corrimano realizzato con attenzione ai dettagli e design funzionale.'
+      en: 'A beautifully crafted shelf inspired by ocean waves, combining functionality with artistic design',
+      it: 'Mensola decorativa in metallo con un design fluido che aggiunge eleganza a qualsiasi ambiente'
     }
   },
   {
-    src: new URL('../assets/images/432427902_1133937657802836_1281568703629158563_n.jpg', import.meta.url).href,
+    src: new URL('../assets/images/custom-round-table.jpg', import.meta.url).href,
     alt: 'Metal Art Installation',
     title: {
-      en: 'Metal Art Installation',
-      it: 'Installazione Artistica in Metallo'
+      en: 'Custom Round Table',
+      it: 'Tavolo Rotondo Personalizzato'
     },
     description: {
-      en: 'Striking metal artwork showcasing precision craftsmanship and artistic vision.',
-      it: 'Notevole opera d\'arte in metallo che mostra precisione artigianale e visione artistica.'
+      en: 'Custom round table with intricate metalwork, perfect for modern interiors',
+      it: 'Tavolo rotondo personalizzato con dettagli in metallo, perfetto per interni moderni'
     }
   },
   {
-    src: new URL('../assets/images/441376026_841307371149678_7625458311415608304_n.jpg', import.meta.url).href,
-    alt: 'Wrought Iron Gate',
+    src: new URL('../assets/images/modern-design-gate1.jpg', import.meta.url).href,
+    alt: 'Modern Design Gate',
     title: {
-      en: 'Wrought Iron Gate',
-      it: 'Cancello in Ferro Battuto'
+      en: 'Modern Design Gate',
+      it: 'Cancello dal Design Moderno'
     },
     description: {
-      en: 'Traditional wrought iron gate with classic blacksmith techniques and durability.',
-      it: 'Tradizionale cancello in ferro battuto con tecniche classiche da fabbro e durabilità.'
+      en: 'Sleek and contemporary gate design, blending functionality with modern aesthetics',
+      it: 'Cancello dal design elegante e contemporaneo, che unisce funzionalità ed estetica moderna'
     }
   },
   {
     src: new URL('../assets/images/modern-art-table-legs.jpg', import.meta.url).href,
-    alt: 'Custom Fireplace Tools',
+    alt: 'Modern Art Table Legs',
     title: {
-      en: 'Custom Fireplace Tools',
-      it: 'Attrezzi Personalizzati per Camino'
+      en: 'Modern Art Table Legs',
+      it: 'Gambe da Tavolo in Arte Moderna'
     },
     description: {
-      en: 'Hand-crafted fireplace tools combining function and beautiful craftsmanship.',
-      it: 'Attrezzi per camino realizzati a mano che combinano funzionalità e bellezza artigianale.'
+      en: 'Stylish table legs designed with a modern artistic flair, perfect for contemporary furniture.',
+      it: 'Gambe da tavolo eleganti progettate con un tocco artistico moderno, perfette per mobili contemporanei'
     }
   },
   {
-    src: new URL('../assets/images/461766915_1254325359250217_2071886545829528107_n.jpg', import.meta.url).href,
-    alt: 'Outdoor Art Piece',
+    src: new URL('../assets/images/industrial-design-external-stairs.jpg', import.meta.url).href,
+    alt: 'Industrial Design External Stairs',
     title: {
-      en: 'Outdoor Art Piece',
-      it: 'Opera d\'Arte da Esterno'
+      en: 'Industrial Design External Stairs',
+      it: 'Scale Esterne in Design Industriale'
     },
     description: {
-      en: 'Freestanding metal sculpture designed to enhance outdoor spaces.',
-      it: 'Scultura metallica autoportante progettata per valorizzare gli spazi esterni.'
-    }
-  },
-  {
-    src: new URL('../assets/images/462598577_1217554782860940_8036160628593374855_n.jpg', import.meta.url).href,
-    alt: 'Decorative Garden Element',
-    title: {
-      en: 'Decorative Garden Element',
-      it: 'Elemento Decorativo da Giardino'
-    },
-    description: {
-      en: 'Artistic garden feature crafted with traditional blacksmithing techniques.',
-      it: 'Caratteristica artistica da giardino realizzata con tecniche tradizionali di lavorazione del ferro.'
-    }
-  },
-  {
-    src: new URL('../assets/images/464910630_535550156007968_7456268962827361962_n.jpg', import.meta.url).href,
-    alt: 'Forged Door Handle',
-    title: {
-      en: 'Forged Door Handle',
-      it: 'Maniglia Forgiata per Porta'
-    },
-    description: {
-      en: 'Custom door handle showcasing meticulous attention to detail and functionality.',
-      it: 'Maniglia per porta personalizzata che mostra meticolosa attenzione ai dettagli e funzionalità.'
+      en: 'Industrial Design External Stairs',
+      it: 'Scale Esterne in Design Industriale'
     }
   },
   {
     src: '/src/assets/images/modern-intern-stairs.jpg',
     alt: 'Traditional Forge Work',
     title: {
-      en: 'Traditional Forge Work',
-      it: 'Lavoro Tradizionale di Forgia'
+      en: 'Modern Intern Stairs',
+      it: 'Scale Interne Moderne'
     },
     description: {
-      en: 'Demonstration of classic blacksmithing techniques showing the craft in action.',
-      it: 'Dimostrazione di tecniche classiche di lavorazione del ferro che mostrano l\'artigianato in azione.'
+      en: 'Modern Intern Stairs',
+      it: 'Scale Interne Moderne'
     }
   }
 ];

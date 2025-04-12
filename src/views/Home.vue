@@ -9,8 +9,7 @@
     </div>
     <!-- Video player now acts as a background element -->
     
-    <div class="content-wrapper">
-      <section class="featured-works py-5">
+    <div class="content-wrapper py-5">
         <div class="container">
         <h2 class="section-title">Featured Works</h2>
         <div class="row g-4">
@@ -30,26 +29,6 @@
           <router-link to="/gallery" class="btn btn-outline-secondary">See Full Gallery</router-link>
         </div>
       </div>
-    </section>
-
-    <section class="testimonials py-5 bg-light">
-      <div class="container">
-        <h2 class="section-title">What Our Clients Say</h2>
-        <div class="row g-4">
-          <div class="col-md-4" v-for="(testimonial, index) in testimonials" :key="index">
-            <div class="card h-100">
-              <div class="card-body">
-                <p class="card-text quote">{{ testimonial.quote }}</p>
-                <div class="client-info">
-                  <h5 class="client-name">{{ testimonial.name }}</h5>
-                  <p class="client-location">{{ testimonial.location }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     </div>
   </div>
 </template>
@@ -76,23 +55,6 @@ export default {
     return {
       menuVideo,
       rawGalleryItems: galleryItems,
-      testimonials: [
-        {
-          quote: "The brothers created a beautiful custom railing for our home that exceeded our expectations. Their craftsmanship is truly exceptional.",
-          name: "Michael Johnson",
-          location: "Portland, OR"
-        },
-        {
-          quote: "Working with SteelNovo was a pleasure from start to finish. They listened to our ideas and transformed them into something even better than we imagined.",
-          name: "Sarah Williams",
-          location: "Seattle, WA"
-        },
-        {
-          quote: "The attention to detail in their metalwork is unmatched. Our garden gate is not just functional but a work of art that everyone comments on.",
-          name: "Robert Miller",
-          location: "Vancouver, BC"
-        }
-      ]
     }
   },
   computed: {
@@ -105,7 +67,6 @@ export default {
         return {
           image: item.src,
           alt: item.alt,
-          category: item.category,
           // Use current language or fallback to English
           title: item.title[currentLocale] || item.title.en,
           description: item.description[currentLocale] || item.description.en

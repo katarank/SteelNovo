@@ -48,7 +48,6 @@ export default {
   name: 'Gallery',
   data() {
     return {
-      activeCategory: 'all',
       selectedItem: null,
       rawGalleryItems: galleryItems
     }

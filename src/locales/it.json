@@ -24,21 +24,7 @@
       "seeGallery": "Vedi Galleria Completa"
     },
     "featured": {
-      "title": "Lavori in Evidenza",
-      "items": {
-        "library": {
-          "title": "Libreria Decorativa da Interni",
-          "description": "Libreria ornamentale forgiata a mano con intricati motivi decorativi e design esagonale."
-        },
-        "cactus-art": {
-          "title": "Arte Cactus",
-          "description": "Scultura artistica in metallo a forma di cactus, un'aggiunta unica per ogni spazio."
-        },
-        "wave-shelf": {
-          "title": "Mensola a Onde",
-          "description": "Mensola decorativa in metallo con un design fluido che aggiunge eleganza a qualsiasi ambiente."
-        }
-      }
+      "title": "Lavori in Evidenza"
     }
   },
   "gallery": {
@@ -47,15 +33,6 @@
     "filter": {
       "all": "Tutti i Lavori",
       "viewLarger": "Visualizza Più Grande"
-    },
-    "categories": {
-      "Gates": "Cancelli",
-      "Railings": "Ringhiere",
-      "Outdoor": "Esterni",
-      "Art": "Arte",
-      "Indoor": "Interni",
-      "Fences": "Recinzioni",
-      "Hardware": "Ferramenta"
     }
   },
   "about": {
