@@ -1,5 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import Menu from '@/components/Menu.vue'
 
 // Import Bootstrap CSS
@@ -9,14 +11,21 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 // Import Bootstrap JS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
+// Initialize i18n
+const { locale } = useI18n()
+const currentLocale = computed(() => locale.value)
+
 </script>
 
 <template>
   <div class="app-container d-flex flex-column min-vh-100">
-    <Menu class="menu"/>
-    <div class="page">
+    <!-- Use the Menu component -->
+    <Menu />
+
+    <main class="flex-grow-1">
       <RouterView />
-    </div>
+    </main>
+
     <footer class="bg-dark text-white py-4 mt-auto">
       <div class="container">
         <div class="row">
@@ -40,8 +49,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
             <h5>{{ $t('footer.quickLinks') }}</h5>
             <ul class="list-unstyled">
               <li><router-link to="/gallery" class="text-white">{{ $t('nav.gallery') }}</router-link></li>
-<!--              <li><router-link to="/about" class="text-white">{{ $t('nav.about') }}</router-link></li>
-              <li><router-link to="/contact" class="text-white">{{ $t('nav.contact') }}</router-link></li>-->
+              <li><router-link to="/about" class="text-white">{{ $t('nav.about') }}</router-link></li>
+              <li><router-link to="/contact" class="text-white">{{ $t('nav.contact') }}</router-link></li>
             </ul>
           </div>
         </div>
@@ -55,20 +64,15 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 </template>
 
 <style>
-.menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+/* App container styles */
+.app-container {
+  height: 100vh;
+  width: 100vh;
+  display: flex;
 }
-.page {
-  position: relative;
-  width: 100%;
-}
+
 body, #app {
-  max-width: unset !important;
-  width: 100% !important;
+  max-width: 100vw !important;
   margin: 0 !important;
   padding: 0 !important;
 }

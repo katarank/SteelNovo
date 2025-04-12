@@ -1,13 +1,12 @@
 <template>
-  <div>
-    <div class="page-header">
-        <VideoPlayer
-            :videoSrc="menuVideo"
-            @videoLoaded="onVideoLoaded"
-            @videoError="onVideoError"
-        />
-    </div>
-
+  <div class="home">
+    <!-- Video player now acts as a background element -->
+    <VideoPlayer 
+      :videoSrc="menuVideo"
+      @videoLoaded="onVideoLoaded"
+      @videoError="onVideoError"
+    />
+    
     <div class="content-wrapper">
       <section class="featured-works py-5">
         <div class="container">
@@ -120,14 +119,11 @@ export default {
 </script>
 
 <style scoped>
-
-.page-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  background-size: cover;
-  height: 35vh;
-  background-position: center;
-  color: white;
-  text-align: center;
+.home {
+  position: relative;
+  min-height: 100vh;
+  width: 100vh;
+  overflow-x: hidden;
 }
 
 .content-wrapper {
