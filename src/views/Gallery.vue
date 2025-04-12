@@ -130,7 +130,7 @@ export default {
 
 <style scoped>
 .page-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('@/assets/images/modern-art-table-legs.jpg');
   background-size: cover;
   background-position: center;
   color: white;

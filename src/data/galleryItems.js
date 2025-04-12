@@ -1,6 +1,6 @@
 export default [
   {
-    src: new URL('../assets/images/416090964_333012463031148_8278810173838462944_n.jpg', import.meta.url).href,
+    src: new URL('../assets/images/exagonal-library.jpg', import.meta.url).href,
     alt: 'Decorative Garden Gate',
     category: 'Gates',
     title: {
@@ -65,7 +65,7 @@ export default [
     }
   },
   {
-    src: new URL('../assets/images/448813202_1513391539287747_1063186017773658937_n.jpg', import.meta.url).href,
+    src: new URL('../assets/images/modern-art-table-legs.jpg', import.meta.url).href,
     alt: 'Custom Fireplace Tools',
     category: 'Indoor',
     title: {
@@ -117,7 +117,7 @@ export default [
     }
   },
   {
-    src: '/src/assets/images/464919734_1202184414414165_7208644673222138645_n.jpg',
+    src: '/src/assets/images/modern-intern-stairs.jpg',
     alt: 'Traditional Forge Work',
     category: 'Art',
     title: {
