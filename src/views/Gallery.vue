@@ -1,32 +1,10 @@
 <template>
   <div>
-    <div class="page-header">
-      <div class="container">
-        <h1>{{ $t('gallery.title') }}</h1>
-        <p>{{ $t('gallery.description') }}</p>
-      </div>
-    </div>
+    <div class="page-header"/>
     <div class="container py-5">
-      <div class="filter-buttons mb-5">
-        <button 
-          class="btn btn-outline-dark me-2 mb-2" 
-          :class="{ 'active': activeCategory === 'all' }" 
-          @click="filterGallery('all')">
-          {{ $t('gallery.filter.all') }}
-        </button>
-        <button 
-          v-for="category in categories" 
-          :key="category" 
-          class="btn btn-outline-dark me-2 mb-2" 
-          :class="{ 'active': activeCategory === category }" 
-          @click="filterGallery(category)">
-          {{ $t(`gallery.categories.${category}`) }}
-        </button>
-      </div>
-
       <div class="row g-4">
         <div 
-          v-for="(item, index) in filteredGalleryItems" 
+          v-for="(item, index) in galleryItems"
           :key="index"
           class="col-md-6 col-lg-4 gallery-item"
         >
@@ -39,11 +17,6 @@
                   <p>{{ $t('gallery.filter.viewLarger') }}</p>
                 </div>
               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">{{ item.title }}</h5>
-              <p class="card-text">{{ item.description }}</p>
-              <span class="badge bg-secondary">{{ $t(`gallery.categories.${item.category}`) }}</span>
             </div>
           </div>
         </div>
@@ -89,31 +62,16 @@ export default {
         return {
           image: item.src,
           alt: item.alt,
-          category: item.category,
           // Use current language or fallback to English
           title: item.title[currentLocale] || item.title.en,
           description: item.description[currentLocale] || item.description.en
         };
       });
-    },
-    categories() {
-      const categorySet = new Set(this.galleryItems.map(item => item.category));
-      return Array.from(categorySet);
-    },
-    filteredGalleryItems() {
-      if (this.activeCategory === 'all') {
-        return this.galleryItems;
-      } else {
-        return this.galleryItems.filter(item => item.category === this.activeCategory);
-      }
     }
   },
   methods: {
-    filterGallery(category) {
-      this.activeCategory = category;
-    },
     openLightbox(index) {
-      this.selectedItem = this.filteredGalleryItems[index];
+      this.selectedItem = this.galleryItems[index];
       // Use Bootstrap 5 method to show the modal
       const myModal = new bootstrap.Modal(document.getElementById('galleryModal'));
       myModal.show();
@@ -130,7 +88,7 @@ export default {
 
 <style scoped>
 .page-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('@/assets/images/modern-art-table-legs.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), transparent), url('@/assets/images/modern-art-table-legs.jpg');
   background-size: cover;
   background-position: center;
   color: white;

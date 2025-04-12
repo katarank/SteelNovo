@@ -2,7 +2,6 @@ export default [
   {
     src: new URL('../assets/images/exagonal-library.jpg', import.meta.url).href,
     alt: 'Decorative Garden Gate',
-    category: 'Gates',
     title: {
       en: 'Decorative Garden Gate',
       it: 'Cancello Decorativo da Giardino'
@@ -15,7 +14,6 @@ export default [
   {
     src: new URL('../assets/images/420576250_6860502140727790_7212253546683085489_n.jpg', import.meta.url).href,
     alt: 'Custom Metal Sculpture',
-    category: 'Art',
     title: {
       en: 'Custom Metal Sculpture',
       it: 'Scultura Metallica Personalizzata'
@@ -28,7 +26,6 @@ export default [
   {
     src: new URL('../assets/images/424444861_1132819214760675_7803895683058345713_n.jpg', import.meta.url).href,
     alt: 'Ornamental Railing',
-    category: 'Railings',
     title: {
       en: 'Ornamental Railing',
       it: 'Ringhiera Ornamentale'
@@ -41,7 +38,6 @@ export default [
   {
     src: new URL('../assets/images/432427902_1133937657802836_1281568703629158563_n.jpg', import.meta.url).href,
     alt: 'Metal Art Installation',
-    category: 'Art',
     title: {
       en: 'Metal Art Installation',
       it: 'Installazione Artistica in Metallo'
@@ -54,7 +50,6 @@ export default [
   {
     src: new URL('../assets/images/441376026_841307371149678_7625458311415608304_n.jpg', import.meta.url).href,
     alt: 'Wrought Iron Gate',
-    category: 'Gates',
     title: {
       en: 'Wrought Iron Gate',
       it: 'Cancello in Ferro Battuto'
@@ -67,7 +62,6 @@ export default [
   {
     src: new URL('../assets/images/modern-art-table-legs.jpg', import.meta.url).href,
     alt: 'Custom Fireplace Tools',
-    category: 'Indoor',
     title: {
       en: 'Custom Fireplace Tools',
       it: 'Attrezzi Personalizzati per Camino'
@@ -80,7 +74,6 @@ export default [
   {
     src: new URL('../assets/images/461766915_1254325359250217_2071886545829528107_n.jpg', import.meta.url).href,
     alt: 'Outdoor Art Piece',
-    category: 'Outdoor',
     title: {
       en: 'Outdoor Art Piece',
       it: 'Opera d\'Arte da Esterno'
@@ -93,7 +86,6 @@ export default [
   {
     src: new URL('../assets/images/462598577_1217554782860940_8036160628593374855_n.jpg', import.meta.url).href,
     alt: 'Decorative Garden Element',
-    category: 'Outdoor',
     title: {
       en: 'Decorative Garden Element',
       it: 'Elemento Decorativo da Giardino'
@@ -106,7 +98,6 @@ export default [
   {
     src: new URL('../assets/images/464910630_535550156007968_7456268962827361962_n.jpg', import.meta.url).href,
     alt: 'Forged Door Handle',
-    category: 'Hardware',
     title: {
       en: 'Forged Door Handle',
       it: 'Maniglia Forgiata per Porta'
@@ -119,7 +110,6 @@ export default [
   {
     src: '/src/assets/images/modern-intern-stairs.jpg',
     alt: 'Traditional Forge Work',
-    category: 'Art',
     title: {
       en: 'Traditional Forge Work',
       it: 'Lavoro Tradizionale di Forgia'
