@@ -29,19 +29,19 @@
         </div>
         <div class="col-md-6">
           <div class="card mb-4">
-            <img src="@/assets/images/only-logo.png" alt="Omar Guerini" class="card-img-top">
+            <img src="@/assets/images/only-logo.png" alt="{{ $t('about.brothers.omar.fullName') }}" class="card-img-top">
             <div class="card-body">
-              <h3 class="card-title">Omar Guerini</h3>
-              <p class="card-text">{{ $t('about.brothers.michael.bio') }}</p>
+              <h3 class="card-title">{{ $t('about.brothers.omar.fullName') }}</h3>
+              <p class="card-text">{{ $t('about.brothers.omar.bio') }}</p>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card mb-4">
-            <img src="@/assets/images/only-logo.png" alt="Davide Guerini" class="card-img-top">
+            <img src="@/assets/images/only-logo.png" alt="{{ $t('about.brothers.davide.fullName') }}" class="card-img-top">
             <div class="card-body">
-              <h3 class="card-title">Davide Guerini</h3>
-              <p class="card-text">{{ $t('about.brothers.david.bio') }}</p>
+              <h3 class="card-title">{{ $t('about.brothers.davide.fullName') }}</h3>
+              <p class="card-text">{{ $t('about.brothers.davide.bio') }}</p>
             </div>
           </div>
         </div>

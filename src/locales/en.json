@@ -23,9 +23,7 @@
       "contactUs": "Contact Us",
       "seeGallery": "See Full Gallery"
     },
-    "featured": {
-      "title": "Featured Works"
-    }
+    "featured": "Featured Works"
   },
   "gallery": {
     "title": "Our Work Gallery",
@@ -40,9 +38,9 @@
     "subtitle": "Our story and craft philosophy",
     "story": {
       "title": "Our Story",
-      "intro": "Two brothers with a shared passion for metalwork, transforming raw materials into functional art since 2010.",
-      "content1": "SteelNovo was founded by brothers Michael and David Thompson, who grew up watching their grandfather work metal in his small workshop. What started as a childhood fascination evolved into a lifelong passion, leading them to establish their own blacksmith business after years of apprenticeship and formal training.",
-      "content2": "Based in the Pacific Northwest, we combine traditional blacksmithing techniques with modern technology to create unique, durable, and beautiful metalwork pieces that tell a story and stand the test of time."
+      "intro": "Two brothers with a shared passion for metalwork, transforming raw materials into functional art since 2011.",
+      "content1": "SteelNovo was founded by brothers Omar and Davide Guerini, who grew up working alongside their father, an expert blacksmith, who passed down the passion for metal forging. What began as a childhood fascination has evolved into a lifelong passion, leading them to establish their own blacksmithing business after years of apprenticeship and professional training.",
+      "content2": "We combine traditional ironworking techniques with modern technology to create unique, durable, and beautiful pieces that tell a story and stand the test of time."
     },
     "philosophy": {
       "title": "Our Craft Philosophy",
@@ -55,12 +53,12 @@
     },
     "brothers": {
       "title": "Meet the Brothers",
-      "michael": {
-        "name": "Michael Thompson",
+      "omar": {
+        "fullName": "Omar Guerini",
         "bio": "With a background in fine arts and 15 years of blacksmithing experience, Michael specializes in sculptural and decorative elements. His eye for design brings artistic vision to each project."
       },
-      "david": {
-        "name": "David Thompson",
+      "davide": {
+        "fullName": "Davide Guerini",
         "bio": "A mechanical engineer by training, David focuses on structural integrity and functional components. His technical expertise ensures that every piece is as durable as it is beautiful."
       }
     },

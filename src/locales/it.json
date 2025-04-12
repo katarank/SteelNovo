@@ -23,9 +23,7 @@
       "contactUs": "Contattaci",
       "seeGallery": "Vedi Galleria Completa"
     },
-    "featured": {
-      "title": "Lavori in Evidenza"
-    }
+    "featured": "Lavori in Evidenza"
   },
   "gallery": {
     "title": "La Nostra Galleria Lavori",
@@ -40,9 +38,9 @@
     "subtitle": "La nostra storia e filosofia artigianale",
     "story": {
       "title": "La Nostra Storia",
-      "intro": "Due fratelli con una passione condivisa per la lavorazione dei metalli, che trasformano materie prime in arte funzionale dal 2010.",
-      "content1": "SteelNovo è stata fondata dai fratelli Michael e David Thompson, cresciuti guardando il loro nonno lavorare il metallo nella sua piccola officina. Quella che è iniziata come una fascinazione infantile si è evoluta in una passione di vita, portandoli a stabilire la propria attività di fabbri dopo anni di apprendistato e formazione professionale.",
-      "content2": "Con sede nel Pacific Northwest, combiniamo tecniche tradizionali di lavorazione del ferro con tecnologia moderna per creare pezzi unici, durevoli e bellissimi che raccontano una storia e resistono alla prova del tempo."
+      "intro": "Due fratelli con una passione condivisa per la lavorazione dei metalli, che trasformano materie prime in arte funzionale dal 2011.",
+      "content1": "SteelNovo è stata fondata dai fratelli Omar e Davide Guerini, cresciuti lavorando a fianco del padre, fabbro esperto, che gli ha tramandato la passione per la forgiatura dei metalli. Quella che è iniziata come una fascinazione infantile si è evoluta in una passione di vita, portandoli a stabilire la propria attività di fabbri dopo anni di apprendistato e formazione professionale.",
+      "content2": "Ccombiniamo tecniche tradizionali di lavorazione del ferro con tecnologia moderna per creare pezzi unici, durevoli e bellissimi che raccontano una storia e resistono alla prova del tempo."
     },
     "philosophy": {
       "title": "La Nostra Filosofia Artigianale",
@@ -55,12 +53,12 @@
     },
     "brothers": {
       "title": "Conosciamo i Fratelli",
-      "michael": {
-        "name": "Michael Thompson",
+      "omar": {
+        "fullName": "Omar Guerini",
         "bio": "Con una formazione in belle arti e 15 anni di esperienza nella lavorazione del ferro, Michael è specializzato in elementi scultorei e decorativi. Il suo occhio per il design porta una visione artistica a ogni progetto."
       },
-      "david": {
-        "name": "David Thompson",
+      "davide": {
+        "fullName": "Davide Guerini",
         "bio": "Ingegnere meccanico di formazione, David si concentra sull'integrità strutturale e sui componenti funzionali. La sua competenza tecnica assicura che ogni pezzo sia tanto durevole quanto bello."
       }
     },

@@ -11,7 +11,7 @@
     
     <div class="content-wrapper py-5">
         <div class="container">
-        <h2 class="section-title">Featured Works</h2>
+        <h2 class="section-title">{{ $t('home.featured') }}</h2>
         <div class="row g-4">
           <div class="col-md-4" v-for="(item, index) in featuredItems" :key="index">
             <div class="card h-100">
@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="text-center mt-4">
-          <router-link to="/gallery" class="btn btn-outline-secondary">See Full Gallery</router-link>
+          <router-link to="/gallery" class="btn btn-outline-secondary">{{ $t('home.buttons.seeGallery') }}</router-link>
         </div>
       </div>
     </div>
