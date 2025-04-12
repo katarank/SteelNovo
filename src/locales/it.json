@@ -1,4 +1,10 @@
 {
+  "pageTitle": {
+    "home": "Steel Novo Fabbri",
+    "gallery": "GALLERIA - Steel Novo",
+    "about": "CHI SIAMO - Steel Novo",
+    "contact": "CONTATTI - Steel Novo"
+  },
   "nav": {
     "home": "Home",
     "gallery": "Galleria",
@@ -20,39 +26,19 @@
     "featured": {
       "title": "Lavori in Evidenza",
       "items": {
-        "gate": {
-          "title": "Cancello Decorativo da Giardino",
-          "description": "Cancello ornamentale forgiato a mano con intricati motivi decorativi e design tradizionale."
+        "library": {
+          "title": "Libreria Decorativa da Interni",
+          "description": "Libreria ornamentale forgiata a mano con intricati motivi decorativi e design esagonale."
         },
-        "railing": {
-          "title": "Ringhiera Ornamentale",
-          "description": "Elegante ringhiera realizzata con attenzione ai dettagli e design funzionale."
+        "cactus-art": {
+          "title": "Arte Cactus",
+          "description": "Scultura artistica in metallo a forma di cactus, un'aggiunta unica per ogni spazio."
         },
-        "fireplace": {
-          "title": "Attrezzi Personalizzati per Camino",
-          "description": "Attrezzi per camino realizzati a mano che combinano funzionalità e bellezza artigianale."
+        "wave-shelf": {
+          "title": "Mensola a Onde",
+          "description": "Mensola decorativa in metallo con un design fluido che aggiunge eleganza a qualsiasi ambiente."
         }
       }
-    },
-    "testimonials": {
-      "title": "Cosa Dicono i Nostri Clienti",
-      "clients": [
-        {
-          "quote": "I fratelli hanno creato una bellissima ringhiera personalizzata per la nostra casa che ha superato le nostre aspettative. La loro maestria è davvero eccezionale.",
-          "name": "Michael Johnson",
-          "location": "Portland, OR"
-        },
-        {
-          "quote": "Lavorare con SteelNovo è stato un piacere dall'inizio alla fine. Hanno ascoltato le nostre idee e le hanno trasformate in qualcosa di ancora migliore di quanto immaginassimo.",
-          "name": "Sarah Williams",
-          "location": "Seattle, WA"
-        },
-        {
-          "quote": "L'attenzione ai dettagli nel loro lavoro con i metalli è impareggiabile. Il nostro cancello da giardino non è solo funzionale ma un'opera d'arte che tutti commentano.",
-          "name": "Robert Miller",
-          "location": "Vancouver, BC"
-        }
-      ]
     }
   },
   "gallery": {
@@ -70,59 +56,7 @@
       "Indoor": "Interni",
       "Fences": "Recinzioni",
       "Hardware": "Ferramenta"
-    },
-    "items": [
-      {
-        "title": "Cancello Decorativo da Giardino",
-        "description": "Cancello ornamentale forgiato a mano con intricati motivi decorativi e design tradizionale.",
-        "category": "Gates"
-      },
-      {
-        "title": "Scultura Metallica Personalizzata",
-        "description": "Opera metallica artistica che presenta tecniche di forgiatura tradizionali e design creativo.",
-        "category": "Art"
-      },
-      {
-        "title": "Ringhiera Ornamentale",
-        "description": "Elegante corrimano realizzato con attenzione ai dettagli e design funzionale.",
-        "category": "Railings"
-      },
-      {
-        "title": "Installazione Artistica in Metallo",
-        "description": "Notevole opera d'arte in metallo che mostra precisione artigianale e visione artistica.",
-        "category": "Art"
-      },
-      {
-        "title": "Cancello in Ferro Battuto",
-        "description": "Tradizionale cancello in ferro battuto con tecniche classiche da fabbro e durabilità.",
-        "category": "Gates"
-      },
-      {
-        "title": "Attrezzi Personalizzati per Camino",
-        "description": "Attrezzi per camino realizzati a mano che combinano funzionalità e bellezza artigianale.",
-        "category": "Indoor"
-      },
-      {
-        "title": "Opera d'Arte da Esterno",
-        "description": "Scultura metallica autoportante progettata per valorizzare gli spazi esterni.",
-        "category": "Outdoor"
-      },
-      {
-        "title": "Elemento Decorativo da Giardino",
-        "description": "Caratteristica artistica da giardino realizzata con tecniche tradizionali di lavorazione del ferro.",
-        "category": "Outdoor"
-      },
-      {
-        "title": "Maniglia Forgiata per Porta",
-        "description": "Maniglia per porta personalizzata che mostra meticolosa attenzione ai dettagli e funzionalità.",
-        "category": "Hardware"
-      },
-      {
-        "title": "Lavoro Tradizionale di Forgia",
-        "description": "Dimostrazione di tecniche classiche di lavorazione del ferro che mostrano l'artigianato in azione.",
-        "category": "Art"
-      }
-    ]
+    }
   },
   "about": {
     "title": "Chi Siamo",

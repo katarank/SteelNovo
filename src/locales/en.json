@@ -1,4 +1,10 @@
 {
+  "pageTitle": {
+    "home": "Steel Novo Blacksmiths",
+    "gallery": "GALLERY - Steel Novo",
+    "about": "ABOUT - Steel Novo",
+    "contact": "CONTACT - Steel Novo"
+  },
   "nav": {
     "home": "Home",
     "gallery": "Gallery",
@@ -7,7 +13,7 @@
   },
   "home": {
     "hero": {
-      "title": "SteelNovo Blacksmith",
+      "title": "SteelNovo Blacksmiths",
       "subtitle": "Master Craftsmanship by Two Brothers",
       "description": "Forging tradition with modern craftsmanship since 2010",
       "motto": "The art of iron is the fusion of strength and beauty, of form and function"
@@ -20,39 +26,19 @@
     "featured": {
       "title": "Featured Works",
       "items": {
-        "gate": {
-          "title": "Decorative Garden Gate",
-          "description": "Hand-forged ornamental gate with intricate scrollwork and traditional design."
+        "library": {
+          "title": "Decorative Indoor Library",
+          "description": "Hand-forged ornamental library with intricate scrollwork and hexagonal design."
         },
-        "railing": {
-          "title": "Ornamental Railing",
-          "description": "Elegant handrail crafted with attention to detail and functional design."
+        "cactus-art": {
+          "title": "Cactus Art Sculpture",
+          "description": "Unique metal sculpture inspired by the beauty of cacti, showcasing intricate details."
         },
-        "fireplace": {
-          "title": "Custom Fireplace Tools",
-          "description": "Hand-crafted fireplace tools combining function and beautiful craftsmanship."
+        "wave-shelf": {
+          "title": "Wave Shelf",
+          "description": "A beautifully crafted shelf inspired by ocean waves, combining functionality with artistic design."
         }
       }
-    },
-    "testimonials": {
-      "title": "What Our Clients Say",
-      "clients": [
-        {
-          "quote": "The brothers created a beautiful custom railing for our home that exceeded our expectations. Their craftsmanship is truly exceptional.",
-          "name": "Michael Johnson",
-          "location": "Portland, OR"
-        },
-        {
-          "quote": "Working with SteelNovo was a pleasure from start to finish. They listened to our ideas and transformed them into something even better than we imagined.",
-          "name": "Sarah Williams",
-          "location": "Seattle, WA"
-        },
-        {
-          "quote": "The attention to detail in their metalwork is unmatched. Our garden gate is not just functional but a work of art that everyone comments on.",
-          "name": "Robert Miller",
-          "location": "Vancouver, BC"
-        }
-      ]
     }
   },
   "gallery": {
@@ -70,59 +56,7 @@
       "Indoor": "Indoor",
       "Fences": "Fences",
       "Hardware": "Hardware"
-    },
-    "items": [
-      {
-        "title": "Decorative Garden Gate",
-        "description": "Hand-forged ornamental gate with intricate scrollwork and traditional design.",
-        "category": "Gates"
-      },
-      {
-        "title": "Custom Metal Sculpture",
-        "description": "Artistic metalwork featuring traditional forging techniques and creative design.",
-        "category": "Art"
-      },
-      {
-        "title": "Ornamental Railing",
-        "description": "Elegant handrail crafted with attention to detail and functional design.",
-        "category": "Railings"
-      },
-      {
-        "title": "Metal Art Installation",
-        "description": "Striking metal artwork showcasing precision craftsmanship and artistic vision.",
-        "category": "Art"
-      },
-      {
-        "title": "Wrought Iron Gate",
-        "description": "Traditional wrought iron gate with classic blacksmith techniques and durability.",
-        "category": "Gates"
-      },
-      {
-        "title": "Custom Fireplace Tools",
-        "description": "Hand-crafted fireplace tools combining function and beautiful craftsmanship.",
-        "category": "Indoor"
-      },
-      {
-        "title": "Outdoor Art Piece",
-        "description": "Freestanding metal sculpture designed to enhance outdoor spaces.",
-        "category": "Outdoor"
-      },
-      {
-        "title": "Decorative Garden Element",
-        "description": "Artistic garden feature crafted with traditional blacksmithing techniques.",
-        "category": "Outdoor"
-      },
-      {
-        "title": "Forged Door Handle",
-        "description": "Custom door handle showcasing meticulous attention to detail and functionality.",
-        "category": "Hardware"
-      },
-      {
-        "title": "Traditional Forge Work",
-        "description": "Demonstration of classic blacksmithing techniques showing the craft in action.",
-        "category": "Art"
-      }
-    ]
+    }
   },
   "about": {
     "title": "About Us",
