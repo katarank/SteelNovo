@@ -17,24 +17,44 @@
                   <p>{{ $t('gallery.filter.viewLarger') }}</p>
                 </div>
               </div>
+              <div class="image-info-overlay">
+                <h5>{{ item.title }}</h5>
+                <p>{{ item.description }}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Lightbox Modal -->
-    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true" v-if="selectedItem">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Fullscreen Lightbox Modal -->
+    <div class="fullscreen-modal" v-if="lightboxVisible" @click.self="closeLightbox">
+      <div class="fullscreen-modal-content">
+        <button type="button" class="close-btn" @click="closeLightbox">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        
+        <div class="image-container">
+          <img :src="selectedItem.image" :alt="selectedItem.title" class="lightbox-image">
+          
+          <!-- Navigation overlay on the image -->
+          <div class="image-navigation-overlay">
+            <div class="nav-area prev-area" @click="navigateGallery(-1)">
+              <div class="nav-indicator">
+                <i class="bi bi-chevron-left"></i>
+              </div>
+            </div>
+            <div class="nav-area next-area" @click="navigateGallery(1)">
+              <div class="nav-indicator">
+                <i class="bi bi-chevron-right"></i>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-            <img :src="selectedItem.image" class="img-fluid" :alt="selectedItem.title">
-            <h3 class="mt-3">{{ selectedItem.title }}</h3>
-            <p>{{ selectedItem.description }}</p>
-          </div>
+        </div>
+        
+        <div class="image-details">
+          <h3>{{ selectedItem.title }}</h3>
+          <p>{{ selectedItem.description }}</p>
         </div>
       </div>
     </div>
@@ -49,6 +69,8 @@ export default {
   data() {
     return {
       selectedItem: null,
+      currentIndex: 0,
+      lightboxVisible: false,
       rawGalleryItems: galleryItems
     }
   },
@@ -70,17 +92,48 @@ export default {
   },
   methods: {
     openLightbox(index) {
+      this.currentIndex = index;
       this.selectedItem = this.galleryItems[index];
-      // Use Bootstrap 5 method to show the modal
-      const myModal = new bootstrap.Modal(document.getElementById('galleryModal'));
-      myModal.show();
+      this.lightboxVisible = true;
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+    },
+    
+    closeLightbox() {
+      this.lightboxVisible = false;
+      document.body.style.overflow = ''; // Re-enable scrolling
+    },
+    
+    navigateGallery(direction) {
+      // Calculate new index with wraparound
+      const totalItems = this.galleryItems.length;
+      this.currentIndex = (this.currentIndex + direction + totalItems) % totalItems;
+      this.selectedItem = this.galleryItems[this.currentIndex];
+    },
+    
+    handleKeyNavigation(event) {
+      if (!this.lightboxVisible) return;
+      
+      switch(event.key) {
+        case 'Escape':
+          this.closeLightbox();
+          break;
+        case 'ArrowRight':
+          this.navigateGallery(1);
+          break;
+        case 'ArrowLeft':
+          this.navigateGallery(-1);
+          break;
+      }
     }
   },
   mounted() {
-    // Import Bootstrap's JavaScript dynamically when component is mounted
-    import('bootstrap').then(bootstrap => {
-      window.bootstrap = bootstrap;
-    });
+    // Add keyboard navigation for the gallery
+    window.addEventListener('keydown', this.handleKeyNavigation);
+  },
+  beforeUnmount() {
+    // Clean up event listener
+    window.removeEventListener('keydown', this.handleKeyNavigation);
+    document.body.style.overflow = ''; // Ensure scrolling is re-enabled when leaving the page
   }
 }
 </script>
@@ -139,11 +192,164 @@ export default {
   margin-bottom: 0.5rem;
 }
 
+.image-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 12px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.image-info-overlay h5 {
+  margin-bottom: 5px;
+  color: #ff5900;
+  font-size: 1rem;
+}
+
+.image-info-overlay p {
+  margin: 0;
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card-img-wrapper:hover .image-info-overlay {
+  transform: translateY(0);
+}
+
 .card:hover .overlay {
   opacity: 1;
 }
 
 .card:hover .card-img-wrapper img {
   transform: scale(1.05);
+}
+
+/* Fullscreen Modal Styles */
+.fullscreen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 9999; /* Ensure it's above everything including the logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fullscreen-modal-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: #ff5900;
+}
+
+.image-navigation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  pointer-events: none; /* Let clicks pass through by default */
+}
+
+.nav-area {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  pointer-events: auto; /* Make this element capture clicks */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.prev-area {
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.next-area {
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.nav-indicator {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-area:hover .nav-indicator {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.image-container {
+  max-width: 100%;
+  max-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 80vh;  /* Limits the height to avoid scrolling */
+  object-fit: contain;
+}
+
+.image-details {
+  color: white;
+  text-align: center;
+  margin-top: 1.5rem;
+  max-width: 800px;
+}
+
+.image-details h3 {
+  color: #ff5900;
+  margin-bottom: 0.5rem;
 }
 </style>
