@@ -93,10 +93,10 @@ const navigateTo = async (route) => {
       
       <!-- Menu Items -->
       <div class="menu-overlay-links">
-        <a href="#" @click.prevent="navigateTo('/')" class="overlay-link">{{ $t('nav.home') }}</a>
-        <a href="#" @click.prevent="navigateTo('/gallery')" class="overlay-link">{{ $t('nav.gallery') }}</a>
-        <a href="#" @click.prevent="navigateTo('/about')" class="overlay-link">{{ $t('nav.about') }}</a>
-        <a href="#" @click.prevent="navigateTo('/contact')" class="overlay-link">{{ $t('nav.contact') }}</a>
+        <a href="#" @click.prevent="navigateTo('/')" class="overlay-link" :class="{ 'active': $route.path === '/' }">{{ $t('nav.home') }}</a>
+        <a href="#" @click.prevent="navigateTo('/gallery')" class="overlay-link" :class="{ 'active': $route.path === '/gallery' }">{{ $t('nav.gallery') }}</a>
+        <a href="#" @click.prevent="navigateTo('/about')" class="overlay-link" :class="{ 'active': $route.path === '/about' }">{{ $t('nav.about') }}</a>
+        <a href="#" @click.prevent="navigateTo('/contact')" class="overlay-link" :class="{ 'active': $route.path === '/contact' }">{{ $t('nav.contact') }}</a>
       </div>
     </div>
   </div>
