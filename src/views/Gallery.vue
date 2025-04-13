@@ -23,49 +23,28 @@
       </div>
     </div>
 
-    <!-- Fullscreen Lightbox Modal -->
-    <div class="fullscreen-modal" v-if="lightboxVisible" @click.self="closeLightbox">
-      <div class="fullscreen-modal-content">
-        <button type="button" class="close-btn" @click="closeLightbox">
-          <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="image-container">
-          <img :src="selectedItem.image" :alt="selectedItem.title" class="lightbox-image">
-          
-          <!-- Title and description overlay that appears on hover -->
-          <div class="image-info-overlay">
-            <h3>{{ selectedItem.title }}</h3>
-            <p>{{ selectedItem.description }}</p>
-          </div>
-          
-          <!-- Navigation overlay on the image -->
-          <div class="image-navigation-overlay">
-            <div class="nav-area prev-area" @click="navigateGallery(-1)">
-              <div class="nav-indicator">
-                <i class="fas fa-chevron-left"></i>
-              </div>
-            </div>
-            <div class="nav-area next-area" @click="navigateGallery(1)">
-              <div class="nav-indicator">
-                <i class="fas fa-chevron-right"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Using the new ImageLightbox component -->
+    <ImageLightbox 
+      :visible="lightboxVisible" 
+      :items="galleryItems" 
+      :current-index="currentIndex"
+      @close="closeLightbox"
+      @navigate="navigateGallery"
+    />
   </div>
 </template>
 
 <script>
 import galleryItems from '../data/galleryItems.js';
+import ImageLightbox from '../components/ImageLightbox.vue';
 
 export default {
   name: 'Gallery',
+  components: {
+    ImageLightbox
+  },
   data() {
     return {
-      selectedItem: null,
       currentIndex: 0,
       lightboxVisible: false,
       rawGalleryItems: galleryItems
@@ -141,7 +120,7 @@ export default {
   background-size: cover;
   background-position: center;
   color: white;
-  height: 30vh;
+  height: 40vh;
   padding: 5rem 0;
   text-align: center;
 }
