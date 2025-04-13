@@ -90,12 +90,6 @@ const navigateTo = async (route) => {
   <!-- Full-screen Overlay Menu -->
   <div class="menu-overlay" v-if="menuOpen" @click="closeMenu">
     <div class="menu-overlay-content" @click.stop>
-      <!-- Close button -->
-      
-      <!-- Overlay Logo -->
-      <div class="menu-overlay-logo">
-        <img src="@/assets/images/only-logo.png" alt="SteelNovo" height="80">
-      </div>
       
       <!-- Menu Items -->
       <div class="menu-overlay-links">
@@ -183,10 +177,6 @@ const navigateTo = async (route) => {
   text-align: center;
 }
 
-.menu-overlay-logo {
-  margin-bottom: 3rem;
-}
-
 .menu-overlay-links {
   display: flex;
   flex-direction: column;
@@ -199,15 +189,16 @@ const navigateTo = async (route) => {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  transition: all 0.3s ease;
   padding: 0.5rem 0;
 }
 
 .overlay-link:hover {
   color: rgba(255, 89, 0, 0.72);
-  transform: translateX(10px);
 }
 
+.overlay-link.active {
+  color: rgba(255, 89, 0, 0.72);
+}
 /* Style for the toggle button and hamburger animation */
 .navbar-toggler {
   position: absolute;
@@ -231,8 +222,8 @@ const navigateTo = async (route) => {
 /* Hamburger menu styles */
 .hamburger-menu {
   position: relative;
-  width: 24px;
-  height: 20px;
+  width: 22px;
+  height: 16px;
   cursor: pointer;
 }
 
