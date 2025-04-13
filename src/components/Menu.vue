@@ -40,19 +40,29 @@ const navigateTo = async (route) => {
 </script>
 
 <template>
+  <!-- Fixed Logo (Always Visible) -->
+  <div class="fixed-logo">
+    <a href="#" @click.prevent="goToHome">
+      <img src="@/assets/images/only-logo.png" alt="SteelNovo" height="60" class="logo-image">
+    </a>
+  </div>
+
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <!-- Menu toggle button - now uses our custom function -->
+      <!-- Menu toggle button with custom hamburger animation -->
       <button class="navbar-toggler" type="button" @click="toggleMenu" aria-controls="navbarNav" :aria-expanded="menuOpen" aria-label="Toggle navigation">
-        <span v-if="!menuOpen" class="navbar-toggler-icon"></span>
-        <span v-else class="navbar-toggler-close-icon">×</span>
+        <div class="hamburger-menu" :class="{ 'open': menuOpen }">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </div>
       </button>
       
       <!-- Regular desktop menu -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 d-flex justify-content-center align-items-center">
-          <!-- Home -->
+          <!-- Left Menu Items -->
           <li class="nav-item mx-3">
             <router-link to="/" class="nav-link" exact-active-class="active">{{ $t('nav.home') }}</router-link>
           </li>
@@ -61,12 +71,10 @@ const navigateTo = async (route) => {
             <router-link to="/gallery" class="nav-link" active-class="active">{{ $t('nav.gallery') }}</router-link>
           </li>
 
-          <li class="nav-item mx-3">
-            <a href="#" @click.prevent="goToHome">
-              <img src="@/assets/images/only-logo.png" alt="SteelNovo" height="50" class="d-inline-block align-top">
-            </a>
-          </li>
+          <!-- Spacer for logo -->
+          <li class="nav-item logo-spacer mx-3"></li>
 
+          <!-- Right Menu Items -->
           <li class="nav-item mx-3">
             <router-link to="/about" class="nav-link" active-class="active">{{ $t('nav.about') }}</router-link>
           </li>
@@ -102,9 +110,36 @@ const navigateTo = async (route) => {
 <script ></script>
 
 <style scoped>
+/* Fixed Logo Styles */
+.fixed-logo {
+  position: fixed;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1200; /* Higher than other elements */
+  text-align: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.logo-image {
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* Logo spacer for the menu */
+.logo-spacer {
+  width: 120px; /* Adjust based on logo size */
+}
+
 /* Navigation styles */
 .navbar {
   background-color: transparent;
+  padding-top: 15px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -173,7 +208,7 @@ const navigateTo = async (route) => {
   transform: translateX(10px);
 }
 
-/* Style for the toggle button and its transition effects */
+/* Style for the toggle button and hamburger animation */
 .navbar-toggler {
   position: absolute;
   top: 10px;
@@ -181,11 +216,11 @@ const navigateTo = async (route) => {
   border: none;
   background-color: transparent;
   transition: all 0.3s ease;
-  padding: 0;
-  z-index: 1100;
+  z-index: 1100; /* Ensure it's above the overlay */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 
 .navbar-toggler:focus {
@@ -193,21 +228,51 @@ const navigateTo = async (route) => {
   outline: none;
 }
 
-.navbar-toggler-icon {
-  transition: all 0.3s ease;
-  animation: fade-in 0.3s forwards;
-
+/* Hamburger menu styles */
+.hamburger-menu {
+  position: relative;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
 }
 
-.navbar-toggler-close-icon {
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 1;
-  color: white;
-  display: inline-block;
-  transition: all 0.3s ease;
-  transform: rotate(0deg);
-  animation: rotate-in 0.3s forwards;
+.line {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.45s ease;
+  left: 0;
+}
+
+.line-1 {
+  top: 0;
+}
+
+.line-2 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-3 {
+  bottom: 0;
+}
+
+/* Animation for open state */
+.hamburger-menu.open .line-1 {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger-menu.open .line-2 {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.hamburger-menu.open .line-3 {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
 }
 
 @keyframes rotate-in {
