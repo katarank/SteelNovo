@@ -138,6 +138,7 @@ const navigateTo = async (route) => {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 200;
 }
 
 .navbar-dark .navbar-nav .nav-link {

@@ -82,7 +82,7 @@ export default {
   background-size: cover;
   background-position: center;
   color: white;
-  height: 40vh;
+  height: 30vh;
   padding: 5rem 0;
   text-align: center;
 }

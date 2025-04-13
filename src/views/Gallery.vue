@@ -17,10 +17,6 @@
                   <p>{{ $t('gallery.filter.viewLarger') }}</p>
                 </div>
               </div>
-              <div class="image-info-overlay">
-                <h5>{{ item.title }}</h5>
-                <p>{{ item.description }}</p>
-              </div>
             </div>
           </div>
         </div>
@@ -31,30 +27,31 @@
     <div class="fullscreen-modal" v-if="lightboxVisible" @click.self="closeLightbox">
       <div class="fullscreen-modal-content">
         <button type="button" class="close-btn" @click="closeLightbox">
-          <i class="bi bi-x-lg"></i>
+          <i class="fas fa-times"></i>
         </button>
         
         <div class="image-container">
           <img :src="selectedItem.image" :alt="selectedItem.title" class="lightbox-image">
           
+          <!-- Title and description overlay that appears on hover -->
+          <div class="image-info-overlay">
+            <h3>{{ selectedItem.title }}</h3>
+            <p>{{ selectedItem.description }}</p>
+          </div>
+          
           <!-- Navigation overlay on the image -->
           <div class="image-navigation-overlay">
             <div class="nav-area prev-area" @click="navigateGallery(-1)">
               <div class="nav-indicator">
-                <i class="bi bi-chevron-left"></i>
+                <i class="fas fa-chevron-left"></i>
               </div>
             </div>
             <div class="nav-area next-area" @click="navigateGallery(1)">
               <div class="nav-indicator">
-                <i class="bi bi-chevron-right"></i>
+                <i class="fas fa-chevron-right"></i>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="image-details">
-          <h3>{{ selectedItem.title }}</h3>
-          <p>{{ selectedItem.description }}</p>
         </div>
       </div>
     </div>
@@ -144,7 +141,7 @@ export default {
   background-size: cover;
   background-position: center;
   color: white;
-  height: 40vh;
+  height: 30vh;
   padding: 5rem 0;
   text-align: center;
 }
@@ -190,39 +187,6 @@ export default {
 .overlay-content i {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-}
-
-.image-info-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 12px;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  text-align: left;
-}
-
-.image-info-overlay h5 {
-  margin-bottom: 5px;
-  color: #ff5900;
-  font-size: 1rem;
-}
-
-.image-info-overlay p {
-  margin: 0;
-  font-size: 0.85rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.card-img-wrapper:hover .image-info-overlay {
-  transform: translateY(0);
 }
 
 .card:hover .overlay {
@@ -324,6 +288,7 @@ export default {
 
 .nav-area:hover .nav-indicator {
   opacity: 1;
+  background-color: #ff5900;
   transform: scale(1.1);
 }
 
@@ -341,15 +306,45 @@ export default {
   object-fit: contain;
 }
 
+/* Image Info Overlay Styles */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  opacity: 0;
+}
+
+.image-container:hover .image-info-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.image-info-overlay h3 {
+  color: #ff5900;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.image-info-overlay p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
 .image-details {
   color: white;
   text-align: center;
   margin-top: 1.5rem;
   max-width: 800px;
-}
-
-.image-details h3 {
-  color: #ff5900;
-  margin-bottom: 0.5rem;
 }
 </style>

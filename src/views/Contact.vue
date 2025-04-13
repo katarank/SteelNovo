@@ -141,7 +141,7 @@ export default {
   background-size: cover;
   background-position: center;
   padding: 5rem 0;
-  height: 40vh;
+  height: 30vh;
   color: white;
   text-align: center;
 }
