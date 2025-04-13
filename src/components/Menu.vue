@@ -48,7 +48,7 @@ const navigateTo = async (route) => {
   </div>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <!-- Menu toggle button with custom hamburger animation -->
       <button class="navbar-toggler" type="button" @click="toggleMenu" aria-controls="navbarNav" :aria-expanded="menuOpen" aria-label="Toggle navigation">
@@ -106,7 +106,7 @@ const navigateTo = async (route) => {
 <style scoped>
 /* Fixed Logo Styles */
 .fixed-logo {
-  position: fixed;
+  position: absolute;
   top: 5px;
   left: 50%;
   transform: translateX(-50%);
@@ -134,6 +134,10 @@ const navigateTo = async (route) => {
 .navbar {
   background-color: transparent;
   padding-top: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .navbar-dark .navbar-nav .nav-link {
