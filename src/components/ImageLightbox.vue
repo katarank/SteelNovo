@@ -221,6 +221,7 @@ export default {
   font-size: 1.2rem;
 }
 
+
 .image-info-overlay p {
   margin-bottom: 0;
   font-size: 0.95rem;
