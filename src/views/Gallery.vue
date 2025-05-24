@@ -106,6 +106,7 @@ export default {
     // Add keyboard navigation for the gallery
     window.addEventListener('keydown', this.handleKeyNavigation);
   },
+
   beforeUnmount() {
     // Clean up event listener
     window.removeEventListener('keydown', this.handleKeyNavigation);
